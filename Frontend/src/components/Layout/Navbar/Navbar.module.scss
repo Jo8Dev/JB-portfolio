@@ -1,0 +1,20 @@
+@use "../../../assets/styles/mixins" as m;
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/animations" as a;
+
+.navbar {
+
+    ul {
+        @include m.flex-center;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    li {
+        color: v.$primary-color;
+
+        &:hover {
+            color: v.$tertiary-color;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@use "sass:map"; // Importation du module 'sass:map'
+
+//Positionnement
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+//Taille
+@mixin h2-size {
+    font-size: clamp(18px, 4.17vw, 60px);
+    font-weight: 700;
+}
+
+//Mixin pour éviter les duplications de code
+@mixin border-radius {
+    border-radius: 25px;
+}
+
+@mixin hero-card-size {
+    width: clamp(315.5px, 36.67vw, 528px);
+    height: clamp(243.6px, 29.65vw, 427px);
+}
+
+@mixin card-shadow {
+    box-shadow: 0px 0px 1px rgba(3, 7, 18, 0.50),
+        0px 1px 6px rgba(3, 7, 18, 0.42),
+        0px 3px 13px rgba(3, 7, 18, 0.33),
+        0px 5px 22px rgba(3, 7, 18, 0.25),
+        0px 8px 35px rgba(3, 7, 18, 0.17),
+        0px 12px 50px rgba(3, 7, 18, 0.08);
+}
+
+// Mixins Responsive (Breakpoint Manager)
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==mobile {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==mobile-medium {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==mobile-small {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+
+}

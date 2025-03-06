@@ -1,0 +1,18 @@
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/mixins" as m;
+@use "../../../assets/styles/animations" as a;
+
+.container {
+    @include m.border-radius;
+    @include m.hero-card-size;
+    animation: shadowAppear 0.5s ease-in-out forwards;
+    position: absolute;
+    padding: 30px;
+    background: linear-gradient(180deg, rgba(85, 0, 250, 1) 30%, rgba(203, 0, 183, 1) 100%);
+    color: v.$tertiary-color;
+
+    @include m.responsive(mobile-medium) {
+        height: 150px;
+        width: 320px;
+    }
+}

@@ -1,0 +1,60 @@
+@use "variables" as v;
+
+//** Définition des styles généraux**//
+.layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; // S'assure que toute la hauteur est prise
+    width: 100%;
+}
+
+main {
+    flex: 1; // Permet au contenu de grandir pour repousser le footer
+}
+
+body {
+    font-family: "Anek Telugu", Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    background-color: #fff;
+    color: v.$primary-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: v.$tertiary-color;
+    /* color of the scroll thumb */
+    border-radius: 25px;
+    /* roundness of the scroll thumb */
+    //border: 3px solid v.$secondary-color;
+    /* creates padding around scroll thumb */
+}

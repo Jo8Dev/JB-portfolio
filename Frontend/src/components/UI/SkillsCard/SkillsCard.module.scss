@@ -1,0 +1,26 @@
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/mixins" as m;
+@use "../../../assets/styles/animations" as a;
+
+.article {
+    @include m.flex-column;
+    @include m.border-radius;
+    @include m.card-shadow;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px;
+    width: clamp(144px, 20vw, 476px);
+    height: 300px;
+    margin-bottom: 100px;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    p {
+        color: v.$secondary-color;
+        width: 50%;
+    }
+}

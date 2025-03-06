@@ -1,0 +1,65 @@
+/* 1. Reset général */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Suppression du style par défaut du body */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Suppression des styles des titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Suppression des puces et marges des listes */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Suppression du soulignement des liens */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Boutons et formulaires */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+/* Images responsives */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

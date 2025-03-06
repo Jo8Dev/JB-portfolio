@@ -1,0 +1,22 @@
+@use "../../../assets/styles/mixins" as m;
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/animations" as a;
+
+.skills {
+    @include m.flex-center;
+    flex-direction: column;
+    justify-content: start;
+    color: purple;
+    height: auto;
+    overflow: hidden;
+
+    h2 {
+        @include m.h2-size;
+    }
+
+    .skills__cards {
+        @include m.flex-center;
+        flex-direction: row;
+        gap: 50px;
+    }
+}

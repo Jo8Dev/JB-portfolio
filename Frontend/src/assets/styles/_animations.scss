@@ -1,0 +1,68 @@
+//Animations du logo
+@mixin logo {
+    width: 100px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+// Variables pour les animations
+
+// Animation de la card
+@keyframes slideOut {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-100px, -100px);
+    }
+}
+
+@keyframes slideOut-mobile {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-10px, -50px);
+    }
+}
+
+@keyframes shadowAppear {
+
+    //Animation de l'ombre de la card
+    to {
+        box-shadow:
+            2.8px 2.8px 2.2px rgba(0, 0, 0, 0.079),
+            6.7px 6.7px 5.3px rgba(0, 0, 0, 0.113),
+            12.5px 12.5px 10px rgba(0, 0, 0, 0.14),
+            22.3px 22.3px 17.9px rgba(0, 0, 0, 0.167),
+            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.201),
+            100px 100px 80px rgba(0, 0, 0, 0.28);
+    }
+}
+
+//Animation du texte
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+//Animation de l'ombre du texte
+@keyframes textShadowAppear {
+    to {
+        text-shadow:
+            2.8px 2.8px 2.2px rgba(0, 0, 0, 0.079),
+            12.5px 12.5px 10px rgba(0, 0, 0, 0.14),
+            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.201),
+            100px 100px 80px rgba(0, 0, 0, 0.28);
+    }
+}

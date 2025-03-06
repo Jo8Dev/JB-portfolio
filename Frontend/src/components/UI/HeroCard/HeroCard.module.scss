@@ -1,0 +1,55 @@
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/mixins" as m;
+@use "../../../assets/styles/animations";
+
+
+.container {
+    @include m.hero-card-size;
+    @include m.border-radius;
+    padding: 30px;
+    background-color: v.$primary-color;
+    color: v.$tertiary-color;
+    animation: slideOut 4s ease-in-out forwards,
+        shadowAppear 3s ease-in-out 1s forwards;
+    overflow: hidden;
+
+
+    h1 {
+        font-weight: 700;
+        font-size: clamp(22px, 5vw, 72px);
+        line-height: 1.1;
+        background: linear-gradient(to right,
+                #7953cd 20%,
+                #00affa 30%,
+                #0190cd 70%,
+                #764ada 80%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        background-size: 500% auto;
+        animation:
+            textShadowAppear 1s ease-in-out 4s forwards,
+            textShine 5s ease-in-out infinite alternate;
+    }
+
+    h2 {
+        @include m.h2-size;
+
+
+        line-height: clamp(6px, 4.17vw, 60px);
+        color: v.$secondary-color;
+    }
+
+    p {
+        color: v.$tertiary-color;
+    }
+
+    @include m.responsive(mobile-medium) {
+        height: 150px;
+        width: 320px;
+        animation: slideOut-mobile 4s ease-in-out forwards,
+            textShadowAppear 1s ease-in-out 4s forwards,
+            shadowAppear 1s ease-in-out 4s forwards;
+    }
+}

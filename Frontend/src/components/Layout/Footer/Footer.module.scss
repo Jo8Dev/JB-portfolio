@@ -1,0 +1,18 @@
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/mixins" as m;
+@use "../../../assets/styles/animations" as a;
+
+.footer {
+    @include m.flex-center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: v.$secondary-color;
+    color: v.$primary-color;
+    text-align: center;
+    width: 100%;
+    min-height: 100px;
+
+    img {
+        @include a.logo;
+    }
+}

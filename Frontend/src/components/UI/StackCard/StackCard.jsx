@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 function StackCard({ icon, alt, title }) {
     return (
-        <article className={styles.StackCard}>
-            <img src={icon} alt={alt} />
-            <span>{title}</span>
+        <article className={styles.stackCard}>
+            <img className={styles.stackCard__icon} src={icon} alt={alt} />
+            <span className={styles.stackCard__title}>{title}</span>
         </article>
     )
 }

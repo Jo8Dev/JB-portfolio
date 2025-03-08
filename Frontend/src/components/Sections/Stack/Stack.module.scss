@@ -10,12 +10,12 @@
     height: auto;
     background-color: rgb(245, 245, 247);
 
-    h2 {
+    &__title {
         @include m.h2-size;
         color: v.$tertiary-color
     }
 
-    .stack__container {
+    &__container {
         @include m.flex-center;
         flex-wrap: wrap;
         gap: 30px;

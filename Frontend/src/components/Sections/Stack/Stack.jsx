@@ -18,6 +18,7 @@ function Stack() {
     return (
         <section className={styles.stack}>
             <motion.h2
+                className={styles.stack__title}
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.5 }}

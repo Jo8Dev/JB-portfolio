@@ -6,10 +6,11 @@ import { Link } from "react-router-dom"
 function Header() {
     return (
         <header className={styles.header}>
-            <Link to="/"><img src={logo} alt="Logo J" /></Link>
+            <Link to="/" className={styles.header__logoLink}>
+                <img className={styles.header__logo} src={logo} alt="Logo J" />
+            </Link>
             <Navbar />
         </header>
-
     )
 }
 

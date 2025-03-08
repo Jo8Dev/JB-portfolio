@@ -3,14 +3,13 @@ import PropTypes from 'prop-types'
 
 function SkillsCard({ alt, description, icon, subtitle }) {
     return (
-        <article className={styles.article}>
-            <img src={icon} alt={alt} />
-            <strong>{subtitle}</strong>
-            <p>{description}</p>
+        <article className={styles.skillsCard}>
+            <img className={styles.skillsCard__icon} src={icon} alt={alt} />
+            <strong className={styles.skillsCard__subtitle}>{subtitle}</strong>
+            <p className={styles.skillsCard__description}>{description}</p>
         </article>
     )
 }
-
 
 SkillsCard.propTypes = {
     alt: PropTypes.string.isRequired,

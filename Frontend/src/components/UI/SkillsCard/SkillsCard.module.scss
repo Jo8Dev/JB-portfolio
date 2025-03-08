@@ -2,7 +2,7 @@
 @use "../../../assets/styles/mixins" as m;
 @use "../../../assets/styles/animations" as a;
 
-.article {
+.skillsCard {
     @include m.flex-column;
     @include m.border-radius;
     @include m.card-shadow;
@@ -14,12 +14,12 @@
     height: 300px;
     margin-bottom: 100px;
 
-    img {
+    &__icon {
         width: 100px;
         height: 100px;
     }
 
-    p {
+    &__description {
         color: v.$secondary-color;
         width: 60%;
     }

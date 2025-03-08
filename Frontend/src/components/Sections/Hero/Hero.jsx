@@ -1,4 +1,3 @@
-
 import HeroCard from "../../UI/HeroCard/HeroCard"
 import styles from "./Hero.module.scss"
 import BackgroundHeroCard from "../../UI/BackgroundHeroCard/BackgroundHeroCard"

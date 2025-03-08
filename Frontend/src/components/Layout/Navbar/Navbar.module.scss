@@ -3,14 +3,13 @@
 @use "../../../assets/styles/animations" as a;
 
 .navbar {
-
-    ul {
+    &__list {
         @include m.flex-center;
         flex-direction: row;
         gap: 20px;
     }
 
-    li {
+    &__item {
         color: v.$primary-color;
 
         &:hover {

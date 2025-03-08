@@ -8,12 +8,12 @@
     gap: 30px;
     height: auto;
 
-    h2 {
+    &__title {
         @include m.h2-size;
         color: v.$tertiary-color;
     }
 
-    .inProgress__container {
+    &__container {
         @include m.flex-center;
         flex-wrap: wrap;
         gap: 30px;

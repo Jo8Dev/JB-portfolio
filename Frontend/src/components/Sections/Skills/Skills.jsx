@@ -3,7 +3,7 @@ import styles from "./Skills.module.scss"
 import SkillsCard from '../../UI/SkillsCard/SkillsCard'
 import { www, tools, api } from '../../../assets/icons/index'
 
-function Skills2() {
+function Skills() {
     const cardProps = [
         {
             icon: www,
@@ -54,15 +54,16 @@ function Skills2() {
     ]
 
     return (
-        <section className={styles.section}>
+        <section className={styles.skills}>
             <motion.h2
+                className={styles.skills__title}
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.5 }}
             >
                 Ce que je propose
             </motion.h2>
-            <div className={styles.skills}>
+            <div className={styles.skills__container}>
                 {cardProps.map((prop, index) => (
                     <motion.div
                         key={index}
@@ -83,4 +84,4 @@ function Skills2() {
     )
 }
 
-export default Skills2
+export default Skills

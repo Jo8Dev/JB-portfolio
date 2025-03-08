@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom'
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <div >Footer </div>
-            <Link to="/"><img src={logo} alt="logo JB" /></Link>
+            <div className={styles.footer__text}>Footer</div>
+            <Link to="/" className={styles.footer__logoLink}>
+                <img className={styles.footer__logo} src={logo} alt="logo JB" />
+            </Link>
         </footer>
-
     )
 }
 

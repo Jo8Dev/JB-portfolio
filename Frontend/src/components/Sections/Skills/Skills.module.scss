@@ -2,7 +2,7 @@
 @use "../../../assets/styles/animations" as a;
 @use "../../../assets/styles/variables" as v;
 
-.section {
+.skills {
     @include m.flex-center;
     flex-wrap: wrap;
     padding-top: 5vh;
@@ -13,12 +13,12 @@
     overflow: hidden;
     padding-bottom: 5vh;
 
-    h2 {
+    &__title {
         @include m.h2-size;
         color: v.$tertiary-color;
     }
 
-    .skills {
+    &__container {
         @include m.flex-center;
         gap: 30px;
         min-height: 400px;

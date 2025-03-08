@@ -1,10 +1,9 @@
 @use "../../../assets/styles/mixins" as m;
 
 .hero {
-    // height: clamp(600px, 62.5vw, 900px);
     height: 95vh;
     @include m.flex-center;
-    margin: 0 -30px; //Outre passe le margin de base du main
+    margin: 0 -30px;
     /* Fixe l'image pendant le scroll */
     background-attachment: fixed;
     /* L'image prendra 100% de l'espace, quitte à la crop */

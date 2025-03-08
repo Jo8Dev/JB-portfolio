@@ -14,6 +14,7 @@ function InProgress() {
     return (
         <section className={styles.inProgress}>
             <motion.h2
+                className={styles.inProgress__title}
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.5 }}

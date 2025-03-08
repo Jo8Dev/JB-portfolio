@@ -1,8 +1,8 @@
 @use "../../../assets/styles/mixins" as m;
-@use "../../../assets/styles/variables" as v;
 @use "../../../assets/styles/animations" as a;
+@use "../../../assets/styles/variables" as v;
 
-.skills {
+.section {
     @include m.flex-center;
     flex-wrap: wrap;
     padding-top: 5vh;
@@ -13,33 +13,19 @@
     overflow: hidden;
     padding-bottom: 5vh;
 
-    .skills__title {
-        @include m.flex-center;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-
-    img {
-        margin-bottom: 50px;
-    }
-
     h2 {
         @include m.h2-size;
-
+        color: v.$tertiary-color;
     }
-}
 
+    .skills {
+        @include m.flex-center;
+        gap: 30px;
+        min-height: 400px;
+        width: 100%;
 
-
-.skills__cards {
-    @include m.flex-center;
-    flex-direction: row;
-    gap: 50px;
-
-    @include m.responsive(mobile) {
-        flex-direction: column;
+        @include m.responsive(mobile) {
+            @include m.flex-column
+        }
     }
 }

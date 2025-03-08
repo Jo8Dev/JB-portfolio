@@ -7,8 +7,7 @@ function App() {
   //Initialisation de Lenis pour les animations (smooth scroll)
   useEffect(() => {
     const lenis = new Lenis({
-      autoRaf: false,
-      lerp: 0.05,
+      lerp: 0.08,
       syncTouch: true,
     })
 
@@ -16,7 +15,15 @@ function App() {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
-    requestAnimationFrame(raf)
+
+    // Stocker l'ID pour nettoyer correctement
+    const frameId = requestAnimationFrame(raf)
+
+    // Nettoyage propre lors du démontage
+    return () => {
+      cancelAnimationFrame(frameId)
+      lenis.destroy()
+    }
   }, [])
 
   return (

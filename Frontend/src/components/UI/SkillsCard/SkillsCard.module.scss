@@ -21,6 +21,11 @@
 
     p {
         color: v.$secondary-color;
-        width: 50%;
+        width: 60%;
+    }
+
+    @include m.responsive(mobile) {
+        width: 80vw;
+        margin-bottom: 0;
     }
 }

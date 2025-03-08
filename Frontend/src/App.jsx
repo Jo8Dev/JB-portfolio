@@ -4,6 +4,7 @@ import Lenis from 'lenis'
 import { useEffect } from "react"
 
 function App() {
+  //Initialisation de Lenis pour les animations (smooth scroll)
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: false,

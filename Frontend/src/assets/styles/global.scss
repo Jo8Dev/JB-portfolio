@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 //** Définition des styles généraux**//
 .layout {
@@ -11,12 +12,20 @@
 
 main {
     flex: 1; // Permet au contenu de grandir pour repousser le footer
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 0 30px;
+
+    @include m.responsive(mobile) {
+        margin: 0 10px;
+    }
 }
 
 body {
     font-family: "Anek Telugu", Georgia, "Times New Roman", serif;
     font-weight: 500;
-    background-color: #fff;
+    background-color: white;
     color: v.$primary-color;
     margin: 0;
     padding: 0;

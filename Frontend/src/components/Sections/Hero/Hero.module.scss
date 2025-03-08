@@ -4,7 +4,7 @@
     // height: clamp(600px, 62.5vw, 900px);
     height: 95vh;
     @include m.flex-center;
-    margin: auto;
+    margin: 0 -30px; //Outre passe le margin de base du main
     /* Fixe l'image pendant le scroll */
     background-attachment: fixed;
     /* L'image prendra 100% de l'espace, quitte à la crop */
@@ -13,5 +13,9 @@
     background-position: center;
     /* Empêche l'image de se répéter en fonction de la taille d'écran */
     background-repeat: no-repeat;
-    background-image: url("../../../assets/images/Bg-original.jpg");
+    background-image: url("../../../assets/images/BgLighter.webp");
+
+    @include m.responsive(mobile) {
+        margin: 0 -10px;
+    }
 }

@@ -1,21 +1,19 @@
 @use "../../../assets/styles/mixins" as m;
 @use "../../../assets/styles/variables" as v;
 
-.stack {
+.inProgress {
     @include m.flex-column;
-    @include m.border-radius;
     padding-bottom: 10vh;
     align-items: center;
     gap: 30px;
     height: auto;
-    background-color: rgb(245, 245, 247);
 
     h2 {
         @include m.h2-size;
-        color: v.$tertiary-color
+        color: v.$tertiary-color;
     }
 
-    .stack__container {
+    .inProgress__container {
         @include m.flex-center;
         flex-wrap: wrap;
         gap: 30px;

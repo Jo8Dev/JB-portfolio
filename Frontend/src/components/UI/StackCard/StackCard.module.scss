@@ -1,0 +1,16 @@
+@use "../../../assets/styles/mixins" as m;
+@use "../../../assets/styles/variables" as v;
+
+.StackCard {
+    @include m.border-radius;
+    @include m.flex-column;
+    align-items: center;
+    flex-wrap: wrap;
+    color: v.$secondary-color;
+
+
+    &:hover {
+        transform: translateY(-10px);
+        transition: transform 0.3s;
+    }
+}

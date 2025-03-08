@@ -1,22 +1,18 @@
+import styles from './InProgress.module.scss'
+import { tailwindcss, postgresql, typescript, react } from "../../../assets/icons/index"
+import { motion } from "motion/react"
 import StackCard from '../../UI/StackCard/StackCard'
-import styles from './Stack.module.scss'
-import { motion } from 'motion/react'
-import { html, css, javascript, react, node, sass, mongodb, figma } from '../../../assets/icons/index'
 
-function Stack() {
+function InProgress() {
     const technologies = [
-        { icon: html, name: 'Html' },
-        { icon: css, name: 'Css' },
-        { icon: sass, name: 'Sass' },
-        { icon: javascript, name: 'Javascript' },
-        { icon: react, name: 'React' },
-        { icon: node, name: 'NodeJs' },
-        { icon: mongodb, name: 'MongoDB' },
-        { icon: figma, name: 'Figma' }
+        { icon: react, name: 'React Native' },
+        { icon: typescript, name: 'TypeScript' },
+        { icon: postgresql, name: 'PostgreSQL' },
+        { icon: tailwindcss, name: 'TailwindCss' }
     ]
 
     return (
-        <section className={styles.stack}>
+        <section className={styles.inProgress}>
             <motion.h2
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -26,15 +22,15 @@ function Stack() {
                     ease: "easeOut"
                 }}
             >
-                Technologies utilisées
+                En cours d&apos;apprentissage
             </motion.h2>
-            <div className={styles.stack__container}>
+            <div className={styles.inProgress__container}>
                 {technologies.map((tech, index) => (
                     <motion.div
                         key={tech.name}
-                        initial={{ opacity: 0, rotateY: -90 }}
-                        whileInView={{ opacity: 1, rotateY: 0 }}
-                        viewport={{ amount: 0.6 }}
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true, amount: 0.6 }}
                         transition={{
                             duration: 0.8,
                             delay: index * 0.1,
@@ -53,4 +49,4 @@ function Stack() {
     )
 }
 
-export default Stack
+export default InProgress

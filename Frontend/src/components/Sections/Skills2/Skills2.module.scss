@@ -1,0 +1,19 @@
+@use "../../../assets/styles/mixins" as m;
+@use "../../../assets/styles/animations" as a;
+
+.section {
+    height: auto;
+    padding-top: 30px;
+    overflow: hidden;
+
+    .skills {
+        @include m.flex-center;
+        gap: 30px;
+        min-height: 400px;
+        width: 100%;
+
+        @include m.responsive(mobile) {
+            @include m.flex-column
+        }
+    }
+}

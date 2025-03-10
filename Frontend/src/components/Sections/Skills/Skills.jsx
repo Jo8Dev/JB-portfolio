@@ -1,7 +1,7 @@
-import { motion } from "motion/react"
 import styles from "./Skills.module.scss"
 import SkillsCard from '../../UI/SkillsCard/SkillsCard'
 import { www, tools, api } from '../../../assets/icons/index'
+import SectionTitle from "../../UI/SectionTitle/SectionTitle"
 
 function Skills() {
     const cardProps = [
@@ -25,59 +25,23 @@ function Skills() {
         }
     ]
 
-    const cardAnimations = [
-        {
-            initial: { opacity: 0, x: -100 },
-            whileInView: {
-                opacity: 1,
-                x: 0,
-
-                transition: { duration: 1, ease: "easeOut" }
-            }
-        },
-        {
-            initial: { opacity: 0, y: 100 },
-            whileInView: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 1, delay: 0.2, ease: "easeOut" }
-            }
-        },
-        {
-            initial: { opacity: 0, x: 100 },
-            whileInView: {
-                opacity: 1,
-                x: 0,
-                transition: { duration: 1, delay: 0.4, ease: "easeOut" }
-            }
-        }
-    ]
-
     return (
         <section className={styles.skills}>
-            <motion.h2
-                className={styles.skills__title}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-            >
+            <SectionTitle className={styles.skills__title}            >
                 Ce que je propose
-            </motion.h2>
+            </SectionTitle>
             <div className={styles.skills__container}>
                 {cardProps.map((prop, index) => (
-                    <motion.div
+                    <SkillsCard
                         key={index}
-                        initial={cardAnimations[index].initial}
-                        whileInView={cardAnimations[index].whileInView}
-                        viewport={{ once: true, amount: 0.5 }}
-                    >
-                        <SkillsCard
-                            icon={prop.icon}
-                            alt={prop.alt}
-                            subtitle={prop.subtitle}
-                            description={prop.description}
-                        />
-                    </motion.div>
+                        icon={prop.icon}
+                        alt={prop.alt}
+                        subtitle={prop.subtitle}
+                        description={prop.description}
+                        animationProps={{
+                            transition: { delay: index * 0.2 }
+                        }}
+                    />
                 ))}
             </div>
         </section>

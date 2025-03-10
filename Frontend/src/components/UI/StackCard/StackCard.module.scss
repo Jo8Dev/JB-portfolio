@@ -4,17 +4,21 @@
 .stackCard {
     @include m.border-radius;
     @include m.flex-column;
+    @include m.card-shadow;
     align-items: center;
     flex-wrap: wrap;
     color: v.$secondary-color;
+    padding: 5px;
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
 
     &:hover {
-        transform: translateY(-10px);
-        transition: transform 0.3s;
+        box-shadow: none;
     }
 
-    &__icon,
-    &__title {
-        // Styles pour ces éléments si nécessaire
+    &__icon {
+        @include m.responsive(mobile) {
+            width: 64px;
+            height: 64px;
+        }
     }
 }

@@ -1,7 +1,9 @@
 import StackCard from '../../UI/StackCard/StackCard'
+import Button from '../../UI/Button/Button'
 import styles from './Stack.module.scss'
-import { motion } from 'motion/react'
 import { html, css, javascript, react, node, sass, mongodb, figma } from '../../../assets/icons/index'
+import SectionTitle from '../../UI/SectionTitle/SectionTitle'
+import SectionText from '../../UI/SectionText/SectionText'
 
 function Stack() {
     const technologies = [
@@ -17,39 +19,28 @@ function Stack() {
 
     return (
         <section className={styles.stack}>
-            <motion.h2
-                className={styles.stack__title}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{
-                    duration: 0.8,
-                    ease: "easeOut"
-                }}
-            >
+            <SectionTitle className={styles.stack__title}>
                 Technologies utilisées
-            </motion.h2>
+            </SectionTitle>
+
+            <SectionText className={styles.stack__description}>
+                Voici les technologies que j&apos;utilise pour créer des applications web pour le moment.
+            </SectionText>
+
             <div className={styles.stack__container}>
                 {technologies.map((tech, index) => (
-                    <motion.div
+                    <StackCard
                         key={tech.name}
-                        initial={{ opacity: 0, rotateY: -90 }}
-                        whileInView={{ opacity: 1, rotateY: 0 }}
-                        viewport={{ amount: 0.6 }}
-                        transition={{
-                            duration: 0.8,
-                            delay: index * 0.1,
-                            ease: "easeOut"
+                        icon={tech.icon}
+                        alt={`logo ${tech.name}`}
+                        title={tech.name}
+                        animationProps={{
+                            transition: { delay: index * 0.1 }
                         }}
-                    >
-                        <StackCard
-                            icon={tech.icon}
-                            alt={`logo ${tech.name}`}
-                            title={tech.name}
-                        />
-                    </motion.div>
+                    />
                 ))}
             </div>
+            <Button text={"Consultez mes projets"} link={"project"} />
         </section>
     )
 }

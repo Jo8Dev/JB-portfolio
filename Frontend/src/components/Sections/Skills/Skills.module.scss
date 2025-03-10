@@ -1,25 +1,13 @@
 @use "../../../assets/styles/mixins" as m;
-@use "../../../assets/styles/animations" as a;
 @use "../../../assets/styles/variables" as v;
 
 .skills {
-    @include m.flex-center;
-    flex-wrap: wrap;
-    padding-top: 5vh;
-    flex-direction: column;
-    color: v.$tertiary-color;
+    @include m.section-container;
     height: auto;
-    gap: 30px;
-    overflow: hidden;
-    padding-bottom: 5vh;
-
-    &__title {
-        @include m.h2-size;
-        color: v.$tertiary-color;
-    }
 
     &__container {
         @include m.flex-center;
+        flex-wrap: wrap;
         gap: 30px;
         min-height: 400px;
         width: 100%;

@@ -1,6 +1,5 @@
 @use "../../../assets/styles/mixins" as m;
 @use "../../../assets/styles/variables" as v;
-@use "../../../assets/styles/animations" as a;
 
 .header {
     @include m.flex-center;
@@ -9,11 +8,11 @@
     z-index: 1000;
     justify-content: space-between;
     width: 100%;
-    height: 100px;
+    height: 80px;
     padding: 0 20px;
     background-color: v.$secondary-color;
 
     &__logo {
-        @include a.logo;
+        @include m.logo;
     }
 }

@@ -1,44 +1,110 @@
-@use "sass:map"; // Importation du module 'sass:map'
+@use "variables" as v;
 
-//Positionnement
+//--Positionnement--//
+
+//Flexbox Center
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+//Flexbox Column
 @mixin flex-column {
     display: flex;
     flex-direction: column;
 }
 
-//Taille
+//Conteneur de section
+@mixin section-container {
+    @include flex-column;
+    align-items: center;
+    @include border-radius;
+    gap: 80px;
+    padding: 50px 20px;
+    width: 90%;
+}
+
+//Taille de la police de caractère H2
 @mixin h2-size {
     font-size: clamp(18px, 4.17vw, 60px);
     font-weight: 700;
+    text-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
 
-//Mixin pour éviter les duplications de code
+//--Mixin pour éviter les duplications de code--//
+
+//Animations du logo
+@mixin logo {
+    width: 75px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+//Bordure arrondie
 @mixin border-radius {
     border-radius: 25px;
 }
 
+//Taille de la carte Hero et HeroBackground
 @mixin hero-card-size {
-    width: clamp(315.5px, 36.67vw, 528px);
+    width: clamp(280.5px, 50vw, 628px);
     height: clamp(243.6px, 29.65vw, 427px);
 }
 
+//Ombre sur les qui ressortent
 @mixin card-shadow {
-    box-shadow: 0px 0px 1px rgba(3, 7, 18, 0.50),
-        0px 1px 6px rgba(3, 7, 18, 0.42),
-        0px 3px 13px rgba(3, 7, 18, 0.33),
-        0px 5px 22px rgba(3, 7, 18, 0.25),
-        0px 8px 35px rgba(3, 7, 18, 0.17),
-        0px 12px 50px rgba(3, 7, 18, 0.08);
+    background: v.$primary-color;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    // box-shadow: 20px 20px 60px #bebebe,
+    //     -20px -20px 60px #ffffff;   
+
 }
 
-// Mixins Responsive (Breakpoint Manager)
+//Ombre sur les cards sombre
+@mixin card-shadow-dark {
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+}
+
+//Ombre sur les cards enfoncées
+@mixin card-shadow-inset {
+    @include border-radius;
+    background: v.$primary-color;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+//Ombre sur le texte
+@mixin text-shadow {
+    text-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+//Gradient sur le texte
+@mixin text-gradient {
+    background: linear-gradient(to right,
+            #7953cd 20%,
+            #00affa 30%,
+            #0190cd 70%,
+            #764ada 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+}
+
+//-- Mixins Responsive (Breakpoint Manager)--//
 @mixin responsive($breakpoint) {
+    @if $breakpoint ==tablet {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
     @if $breakpoint ==mobile {
         @media (max-width: 768px) {
             @content;

@@ -1,3 +1,4 @@
+import About from "../../components/Sections/About/About"
 import Hero from "../../components/Sections/Hero/Hero"
 import InProgress from "../../components/Sections/InProgress/InProgress"
 import Skills from "../../components/Sections/Skills/Skills"
@@ -11,6 +12,8 @@ function Home() {
             <Skills />
             <Stack />
             <InProgress />
+            <About />
+
         </>
     )
 }

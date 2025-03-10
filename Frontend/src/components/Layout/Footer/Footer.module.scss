@@ -1,6 +1,5 @@
 @use "../../../assets/styles/variables" as v;
 @use "../../../assets/styles/mixins" as m;
-@use "../../../assets/styles/animations" as a;
 
 .footer {
     @include m.flex-center;
@@ -10,9 +9,9 @@
     color: v.$primary-color;
     text-align: center;
     width: 100%;
-    min-height: 100px;
+    min-height: 80px;
 
     &__logo {
-        @include a.logo;
+        @include m.logo;
     }
 }

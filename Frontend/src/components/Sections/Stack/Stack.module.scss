@@ -2,24 +2,14 @@
 @use "../../../assets/styles/variables" as v;
 
 .stack {
-    @include m.flex-column;
-    @include m.border-radius;
-    padding-bottom: 10vh;
-    align-items: center;
-    gap: 30px;
+    @include m.section-container;
+    @include m.card-shadow-inset;
     height: auto;
-    background-color: rgb(245, 245, 247);
-
-    &__title {
-        @include m.h2-size;
-        color: v.$tertiary-color
-    }
 
     &__container {
         @include m.flex-center;
         flex-wrap: wrap;
         gap: 30px;
-        margin: 0px 20vw;
         justify-content: space-between;
     }
 }

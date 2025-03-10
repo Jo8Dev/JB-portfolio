@@ -1,9 +1,9 @@
 @use "../../../assets/styles/mixins" as m;
 
 .hero {
-    height: 95vh;
     @include m.flex-center;
-    margin: 0 -30px;
+    height: 95vh;
+    width: 100%;
     /* Fixe l'image pendant le scroll */
     background-attachment: fixed;
     /* L'image prendra 100% de l'espace, quitte à la crop */
@@ -14,7 +14,4 @@
     background-repeat: no-repeat;
     background-image: url("../../../assets/images/BgLighter.webp");
 
-    @include m.responsive(mobile) {
-        margin: 0 -10px;
-    }
 }

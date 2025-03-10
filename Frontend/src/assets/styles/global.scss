@@ -7,30 +7,28 @@
     flex-direction: column;
     justify-content: center;
     min-height: 100vh; // S'assure que toute la hauteur est prise
-    width: 100%;
 }
 
 main {
     flex: 1; // Permet au contenu de grandir pour repousser le footer
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    margin: 0 30px;
-
-    @include m.responsive(mobile) {
-        margin: 0 10px;
-    }
+    align-items: center;
+    gap: 5vh;
+    margin-bottom: 5vh;
 }
 
 body {
     font-family: "Anek Telugu", Georgia, "Times New Roman", serif;
     font-weight: 500;
-    background-color: white;
-    color: v.$primary-color;
+    background-color: v.$primary-color;
+    color: v.$secondary-color;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 html.lenis,
 html.lenis body {

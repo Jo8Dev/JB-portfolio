@@ -12,7 +12,8 @@
     color: v.$tertiary-color;
 
     @include m.responsive(mobile-medium) {
-        height: 150px;
-        width: 320px;
+
+        height: clamp(260px, 36.67vw, 528px);
+        width: clamp(260px, 36.67vw, 528px);
     }
 }

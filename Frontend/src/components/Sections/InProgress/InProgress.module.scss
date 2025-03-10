@@ -2,22 +2,14 @@
 @use "../../../assets/styles/variables" as v;
 
 .inProgress {
-    @include m.flex-column;
+    @include m.section-container;
     padding-bottom: 10vh;
-    align-items: center;
     gap: 30px;
-    height: auto;
-
-    &__title {
-        @include m.h2-size;
-        color: v.$tertiary-color;
-    }
 
     &__container {
         @include m.flex-center;
         flex-wrap: wrap;
         gap: 30px;
-        margin: 0px 20vw;
         justify-content: space-between;
     }
 }

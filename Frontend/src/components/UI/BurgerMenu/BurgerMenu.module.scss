@@ -1,0 +1,78 @@
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/mixins" as m;
+
+
+
+.burgerMenu {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    z-index: 1000;
+    overflow: hidden;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.open {
+        transform: rotate(180deg);
+    }
+
+    .bar {
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right, v.$primary-color, v.$tertiary-color);
+        border-radius: 4px;
+        transition: transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+            opacity 0.3s ease-in-out,
+            margin 0.3s ease-in-out,
+            width 0.3s ease-in-out;
+        position: relative;
+
+        &:nth-child(1) {
+            transform-origin: top left;
+        }
+
+        &:nth-child(3) {
+            transform-origin: bottom left;
+        }
+    }
+
+    &.open .bar {
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(4px, -2px);
+            width: 120%;
+            box-shadow: 0 0 10px rgba(v.$tertiary-color, 0.7);
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        &:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, 2px);
+            width: 120%;
+            box-shadow: 0 0 10px rgba(v.$tertiary-color, 0.7);
+        }
+    }
+
+    // Effet hover
+    &:hover .bar {
+        background: linear-gradient(to right, v.$tertiary-color);
+    }
+
+    // Animation supplémentaire
+    &:active {
+        transform: scale(0.9);
+    }
+}

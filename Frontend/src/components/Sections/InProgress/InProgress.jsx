@@ -1,7 +1,8 @@
 import styles from './InProgress.module.scss'
 import { tailwindcss, postgresql, typescript, react } from "../../../assets/icons/index"
-import { motion } from "motion/react"
 import StackCard from '../../UI/StackCard/StackCard'
+import SectionTitle from '../../UI/SectionTitle/SectionTitle'
+import SectionText from '../../UI/SectionText/SectionText'
 
 function InProgress() {
     const technologies = [
@@ -13,37 +14,25 @@ function InProgress() {
 
     return (
         <section className={styles.inProgress}>
-            <motion.h2
-                className={styles.inProgress__title}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{
-                    duration: 0.8,
-                    ease: "easeOut"
-                }}
-            >
+            <SectionTitle className={styles.inProgress__title}>
                 En cours d&apos;apprentissage
-            </motion.h2>
+            </SectionTitle>
+
+            <SectionText className={styles.inProgress__description}>
+                La vie de développeur est un apprentissage continu. Voici les technologies que j&apos;apprends actuellement.
+            </SectionText>
+
             <div className={styles.inProgress__container}>
                 {technologies.map((tech, index) => (
-                    <motion.div
+                    <StackCard
                         key={tech.name}
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true, amount: 0.6 }}
-                        transition={{
-                            duration: 0.8,
-                            delay: index * 0.1,
-                            ease: "easeOut"
+                        icon={tech.icon}
+                        alt={`logo ${tech.name}`}
+                        title={tech.name}
+                        animationProps={{
+                            transition: { delay: index * 0.1, ease: "easeOut" }
                         }}
-                    >
-                        <StackCard
-                            icon={tech.icon}
-                            alt={`logo ${tech.name}`}
-                            title={tech.name}
-                        />
-                    </motion.div>
+                    />
                 ))}
             </div>
         </section>

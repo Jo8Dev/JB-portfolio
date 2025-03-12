@@ -7,7 +7,7 @@ function App() {
   //Initialisation de Lenis pour les animations (smooth scroll)
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.08,
+      lerp: 0.2,
       syncTouch: true,
     })
 

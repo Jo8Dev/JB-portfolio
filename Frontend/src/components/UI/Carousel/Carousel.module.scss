@@ -54,6 +54,10 @@
             color: v.$tertiary-color;
             @include m.card-shadow-dark;
         }
+
+        @include m.responsive(mobile) {
+            display: none;
+        }
     }
 
     // Personnalisation de la pagination Swiper

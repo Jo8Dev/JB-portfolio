@@ -1,5 +1,5 @@
-@use "../../../assets/styles/variables" as v;
-@use "../../../assets/styles/mixins" as m;
+@use "../../assets/styles/variables" as v;
+@use "../../assets/styles/mixins" as m;
 
 // Variables pour éviter les répétitions
 $grid-gap: 20px;
@@ -11,7 +11,7 @@ $container-padding: 20px;
     align-items: center;
     width: 100%;
     padding: $container-padding;
-    min-height: 100vh;
+    min-height: 80vh;
     justify-content: center;
 
     &__sectionTitle {
@@ -23,7 +23,7 @@ $container-padding: 20px;
 .projectLayout {
     display: grid;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(100px, auto);
     gap: $grid-gap;
@@ -39,9 +39,6 @@ $container-padding: 20px;
         padding: $container-padding;
         transition: all 1s ease;
 
-        &:hover {
-            box-shadow: none;
-        }
     }
 
     // Positions des éléments - utilisation directe des propriétés grid sans mixin grid-position
@@ -142,7 +139,7 @@ $container-padding: 20px;
     }
 
     &__technology {
-        @include m.card-shadow-dark;
+        @include m.card-shadow-inset;
         @include m.border-radius;
         font-size: 0.9rem;
         padding: 8px;
@@ -167,6 +164,12 @@ $container-padding: 20px;
 
         &:hover {
             color: v.$tertiary-color;
+            box-shadow: none;
+        }
+
+        &:active {
+            @include m.card-shadow-inset;
+            border-radius: 15px;
         }
     }
 

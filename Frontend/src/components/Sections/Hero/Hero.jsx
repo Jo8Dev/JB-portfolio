@@ -6,7 +6,7 @@ function Hero() {
     return (
         <div className={styles.hero}>
             <BackgroundHeroCard />
-            <HeroCard title={"Hello! Moi c'est Joris"} subTitle={"Développeur Web Front-end Junior"} description={"Ensemble, réalisons des projets innovants. À distance ou sur site, je suis prêt à relever de nouveaux défis."} />
+            <HeroCard title={"Hello! Moi c'est Joris"} subTitle={"Développeur Web"} description={"Ensemble, transformons vos idées en réalité avec des technologies modernes et adaptées à vos besoins. Que ce soit en freelance ou au sein d'une équipe, je suis prêt à relever de nouveaux défis."} />
         </div>
     )
 }

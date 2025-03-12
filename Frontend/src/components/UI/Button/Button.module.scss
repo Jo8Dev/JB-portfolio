@@ -1,18 +1,31 @@
-/* From Uiverse.io by ke1221 */
-.button {
-    color: #090909;
-    padding: 0.7em 1.7em;
-    font-size: 18px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    cursor: pointer;
-    border: 1px solid #e8e8e8;
-    // transition: all 0.2s;
-    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/mixins" as m;
 
-    &:active {
-        color: #667;
-        box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+.button {
+    @include m.card-shadow;
+    border-radius: 15px;
+    padding: 0.7em 1.7em;
+    min-width: 80px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        color: v.$tertiary-color;
     }
 
+    &:active {
+        @include m.card-shadow-inset;
+        border-radius: 15px;
+        color: rgba(v.$tertiary-color, 0.5);
+    }
+
+    // Style pour l'état désactivé
+    &:disabled {
+        @include m.card-shadow-inset;
+        border-radius: 15px;
+        color: #a0a0a0;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
 }

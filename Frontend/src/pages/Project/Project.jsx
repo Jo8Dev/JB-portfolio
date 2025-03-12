@@ -1,6 +1,11 @@
+import ProjectLayout from "../../components/Sections/ProjectLayout/ProjectLayout";
+
 function Project() {
     return (
-        <div>Project</div>
+        <>
+
+            <ProjectLayout />
+        </>
     )
 }
 

@@ -1,0 +1,74 @@
+[
+    {
+        "id": "0",
+        "title": "Kasa - Plateforme de location",
+        "images": [
+            "/images/kasa.png",
+            "/images/kasa-2.jpg"
+        ],
+        "technologies": [
+            "React",
+            "SCSS",
+            "JavaScript"
+        ],
+        "description": "Kasa est une plateforme de location d'appartements entre particuliers...",
+        "links": [
+            {
+                "url": "https://github.com/yourusername/kasa",
+                "label": "GitHub"
+            },
+            {
+                "url": "https://kasa-demo.netlify.app",
+                "label": "Demo"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "title": "Nom de votre autre projet",
+        "images": [
+            "/assets/images/autre-projet.png",
+            "/assets/images/autre-projet-2.png"
+        ],
+        "technologies": [
+            "Vue.js",
+            "Tailwind CSS",
+            "TypeScript"
+        ],
+        "description": "Description de votre autre projet...",
+        "links": [
+            {
+                "url": "https://github.com/yourusername/autre-projet",
+                "label": "GitHub"
+            },
+            {
+                "url": "https://autre-projet-demo.netlify.app",
+                "label": "Demo"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Nom de votre autre projet",
+        "images": [
+            "/assets/images/autre-projet.png",
+            "/assets/images/autre-projet-2.png"
+        ],
+        "technologies": [
+            "Vue.js",
+            "Tailwind CSS",
+            "TypeScript"
+        ],
+        "description": "Description de votre autre projet...",
+        "links": [
+            {
+                "url": "https://github.com/yourusername/autre-projet",
+                "label": "GitHub"
+            },
+            {
+                "url": "https://autre-projet-demo.netlify.app",
+                "label": "Demo"
+            }
+        ]
+    }
+]

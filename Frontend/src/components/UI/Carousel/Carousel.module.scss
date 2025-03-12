@@ -1,0 +1,72 @@
+@use "../../../assets/styles/variables" as v;
+@use "../../../assets/styles/mixins" as m;
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    @include m.border-radius;
+    @include m.card-shadow-inset;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 21 / 9;
+        object-fit: cover;
+
+        @include m.responsive(mobile-medium) {
+            aspect-ratio: 4 / 3;
+        }
+    }
+
+    // Personnalisation des flèches de navigation Swiper
+    :global(.swiper-button-prev),
+    :global(.swiper-button-next) {
+        color: v.$secondary-color;
+        background: rgba(v.$primary-color, 0.9);
+        width: 40px;
+        height: 40px;
+        @include m.card-shadow-inset;
+
+        &::after {
+            font-size: 18px;
+        }
+
+        &:hover {
+            color: v.$tertiary-color;
+            @include m.card-shadow-dark;
+        }
+    }
+
+    // Personnalisation de la pagination Swiper
+    :global(.swiper-pagination-bullet) {
+        background: rgba(v.$primary-color, 0.5);
+        border: 1px solid v.$tertiary-color;
+    }
+
+    // Sélecteur séparé pour le bullet actif
+    :global(.swiper-pagination-bullet-active) {
+        background: v.$tertiary-color;
+        transform: scale(1.2);
+    }
+
+
+}

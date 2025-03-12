@@ -1,0 +1,18 @@
+@use "../../assets/styles/mixins" as m;
+@use "../../assets/styles/variables" as v;
+
+.contact {
+    @include m.section-container;
+    @include m.card-shadow-inset;
+    height: auto;
+
+    &__form {
+        @include m.card-shadow;
+        @include m.border-radius;
+        padding: 30px;
+        width: 100%;
+        max-width: 600px;
+        @include m.flex-column;
+        gap: 20px;
+    }
+}

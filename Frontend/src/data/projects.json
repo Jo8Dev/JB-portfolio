@@ -4,65 +4,47 @@
         "title": "Kasa - Plateforme de location",
         "images": [
             "/images/kasa.png",
-            "/images/kasa-2.jpg"
+            "/images/kasa-2.png"
         ],
         "technologies": [
             "React",
+            "React Router DOM",
             "SCSS",
             "JavaScript"
         ],
-        "description": "Kasa est une plateforme de location d'appartements entre particuliers...",
+        "description": "KASA est un projet de développement d'une application web de type Airbnb, où j'ai conçu le front-end en utilisant React. L'objectif était de créer des composants réutilisables pour gérer l'affichage des logements, les détails des annonces et les interactions des utilisateurs. Le routage a été géré avec React Router DOM pour une navigation fluide entre les différentes pages de l'application. Ce projet m'a permis de mettre en pratique les bonnes pratiques de développement React tout en assurant une interface moderne et maintenable.",
         "links": [
             {
-                "url": "https://github.com/yourusername/kasa",
+                "url": "https://github.com/jo8dev/kasa",
                 "label": "GitHub"
             },
             {
-                "url": "https://kasa-demo.netlify.app",
-                "label": "Demo"
+                "url": "target_blank",
+                "label": "Pages"
             }
         ]
     },
     {
         "id": "1",
-        "title": "Nom de votre autre projet",
+        "title": "Mon vieux grimoire",
         "images": [
-            "/assets/images/autre-projet.png",
-            "/assets/images/autre-projet-2.png"
+            "/images/mvg.png",
+            "/images/mvg-2.png",
+            "/images/mvg-3.png"
         ],
         "technologies": [
-            "Vue.js",
-            "Tailwind CSS",
-            "TypeScript"
+            "NodeJs",
+            "JavaScript",
+            "MongoDB",
+            "Mongoose",
+            "Express",
+            "JWT",
+            "Bcrypt"
         ],
-        "description": "Description de votre autre projet...",
+        "description": "Mon Vieux Grimoire est une application web que j'ai développée dans le cadre de ma formation OpenClassrooms. Elle permet aux utilisateurs de s'inscrire, se connecter, puis d'ajouter, modifier et supprimer des livres dans leur bibliothèque personnelle. Les utilisateurs peuvent également noter les livres des autres. Le projet utilise des technologies telles que Node.js, MongoDB et React, et m'a permis de développer mes compétences en développement full-stack tout en offrant une interface intuitive et fluide.",
         "links": [
             {
-                "url": "https://github.com/yourusername/autre-projet",
-                "label": "GitHub"
-            },
-            {
-                "url": "https://autre-projet-demo.netlify.app",
-                "label": "Demo"
-            }
-        ]
-    },
-    {
-        "id": "2",
-        "title": "Nom de votre autre projet",
-        "images": [
-            "/assets/images/autre-projet.png",
-            "/assets/images/autre-projet-2.png"
-        ],
-        "technologies": [
-            "Vue.js",
-            "Tailwind CSS",
-            "TypeScript"
-        ],
-        "description": "Description de votre autre projet...",
-        "links": [
-            {
-                "url": "https://github.com/yourusername/autre-projet",
+                "url": "https://github.com/jo8dev/Mon-vieux-grimoire",
                 "label": "GitHub"
             },
             {

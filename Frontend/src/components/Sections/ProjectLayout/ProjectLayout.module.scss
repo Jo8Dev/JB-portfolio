@@ -37,10 +37,10 @@ $container-padding: 20px;
         @include m.border-radius;
         background: v.$primary-color;
         padding: $container-padding;
-        transition: all 0.3s ease;
+        transition: all 1s ease;
 
         &:hover {
-            transform: translateY(-5px);
+            box-shadow: none;
         }
     }
 
@@ -112,6 +112,10 @@ $container-padding: 20px;
         height: auto;
         aspect-ratio: 825 / 411;
         object-fit: cover;
+
+        &:hover {
+            translate: scale(1.8);
+        }
     }
 
     &__projectTitle {
@@ -131,17 +135,17 @@ $container-padding: 20px;
     }
 
     &__technologies {
-        display: flex;
+        @include m.flex-center;
+        align-items: center;
         flex-wrap: wrap;
         gap: 10px;
     }
 
     &__technology {
-        @include m.card-shadow;
-        padding: 5px 12px;
-        border-radius: 20px;
+        @include m.card-shadow-dark;
+        @include m.border-radius;
         font-size: 0.9rem;
-        background: linear-gradient(145deg, v.$primary-color, 5%, v.$primary-color);
+        padding: 8px;
     }
 
     &__description {
@@ -162,8 +166,7 @@ $container-padding: 20px;
         transition: all 0.3s ease;
 
         &:hover {
-            transform: scale(1.05);
-            box-shadow: 8px 8px 16px #c5c5c5, -8px -8px 16px #ffffff;
+            color: v.$tertiary-color;
         }
     }
 

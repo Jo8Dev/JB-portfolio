@@ -15,4 +15,33 @@
         @include m.flex-column;
         gap: 20px;
     }
+
+    input,
+    textarea {
+        @include m.card-shadow-inset;
+        border-radius: 5px;
+        height: 40px;
+        padding-left: 5px;
+        background-color: white;
+    }
+
+    button {
+        @include m.card-shadow;
+        border-radius: 15px;
+        height: 40px;
+        padding: 0 15px;
+        margin: auto;
+
+        &:active {
+            @include m.card-shadow-inset;
+        }
+
+        &:hover {
+            box-shadow: none;
+            color: v.$tertiary-color;
+        }
+
+
+    }
+
 }

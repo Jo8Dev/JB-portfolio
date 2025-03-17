@@ -12,14 +12,17 @@ function InProgress() {
         { icon: tailwindcss, name: 'TailwindCss' }
     ]
 
+    const title = "En cours d'apprentissage"
+    const description = "La vie de développeur est un apprentissage constant. Voici les technologies que je perfectionne actuellement."
+
     return (
         <section className={styles.inProgress}>
             <SectionTitle className={styles.inProgress__title}>
-                En cours d&apos;apprentissage
+                {title}
             </SectionTitle>
 
             <SectionText className={styles.inProgress__description}>
-                La vie de développeur est un apprentissage continu. Voici les technologies que j&apos;apprends actuellement.
+                {description}
             </SectionText>
 
             <div className={styles.inProgress__container}>

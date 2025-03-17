@@ -14,4 +14,19 @@
     &__logo {
         @include m.logo;
     }
+
+    &__arrowUp {
+        @include m.logo;
+    }
+
+}
+
+.top {
+    // Styles existants...
+    transition: all 0.3s ease; // Transition douce sur toutes les propriétés
+
+    &:hover {
+        transform: translateY(-5px); // Monte légèrement au survol
+        color: v.$tertiary-color; // Changement de couleur au survol
+    }
 }

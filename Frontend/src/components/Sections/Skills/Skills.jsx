@@ -9,26 +9,28 @@ function Skills() {
             icon: www,
             alt: "world wide web logo",
             subtitle: "Développement de sites web :",
-            description: "Création de sites responsive, optimisés pour le référencement et adaptés aux besoins spécifiques du client.",
+            description: "Création de sites web responsives, optimisés pour le référencement, et parfaitement adaptés aux besoins de votre entreprise.",
         },
         {
             icon: tools,
             alt: "tools logo",
             subtitle: "Maintenance et évolution :",
-            description: "Mise à jour, amélioration des performances et correction des erreurs sur des projets existants.",
+            description: "Mise à jour, amélioration des performances et gestion des évolutions sur des projets existants pour garantir leur pérennité et leur efficacité.",
         },
         {
             icon: api,
             alt: "api logo",
             subtitle: "Intégration d'API :",
-            description: "Création et intégration d'API pour des services tiers ou des solutions internes.",
+            description: "Conception et intégration d'API pour optimiser les échanges entre systèmes internes ou avec des services tiers, améliorant ainsi l'interopérabilité des outils.",
         }
     ]
+
+    const title = "Ce que j'apporte"
 
     return (
         <section className={styles.skills}>
             <SectionTitle className={styles.skills__title}            >
-                Ce que je propose
+                {title}
             </SectionTitle>
             <div className={styles.skills__container}>
                 {cardProps.map((prop, index) => (

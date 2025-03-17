@@ -17,14 +17,17 @@ function Stack() {
         { icon: figma, name: 'Figma' }
     ]
 
+    const title = "Technologies utilisées"
+    const description = "Voici les technologies que j'emploie pour développer des applications web performantes et adaptées aux besoins de mes projets."
+
     return (
         <section className={styles.stack}>
             <SectionTitle className={styles.stack__title}>
-                Technologies utilisées
+                {title}
             </SectionTitle>
 
             <SectionText className={styles.stack__description}>
-                Voici les technologies que j&apos;utilise pour créer des applications web pour le moment.
+                {description}
             </SectionText>
 
             <div className={styles.stack__container}>

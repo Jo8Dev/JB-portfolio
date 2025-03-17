@@ -6,6 +6,7 @@ import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import SectionText from '../../UI/SectionText/SectionText'
 
 function About() {
+    const aboutMe = "Je suis basketteur professionnel depuis plus de 10 ans et, tout en poursuivant ma carrière sur les terrains, je me reconvertis vers le développement web, un domaine pour lequel j'ai toujours eu une passion profonde. Depuis longtemps, je m'intéresse non seulement au développement logiciel, mais aussi au hardware et à l'univers de l'informatique. J'aime particulièrement monter des PC, ce qui me permet d'explorer la technologie sous un autre angle. Tout en continuant à jouer à haut niveau, j'ai entrepris une formation en développement web, où j'ai acquis des compétences en technologies telles que JavaScript, React, Node.js et MongoDB. Mon approche du développement est marquée par la rigueur et la discipline que j'ai développées dans le sport : chaque ligne de code compte, et je suis déterminé à continuer d’apprendre et de progresser. Aujourd'hui, je souhaite allier ma passion pour la technologie, mon esprit de compétition et mon intérêt pour le hardware afin de créer des projets innovants et impactants, tout en restant fidèle à mes valeurs de travail en équipe, d'effort et d'amélioration continue."
     return (
         <section className={styles.about}>
             <SectionTitle className={styles.about__title}>
@@ -20,7 +21,7 @@ function About() {
                     transition: { duration: 1.2, delay: 0.3 }
                 }}
             >
-                Je suis un développeur web fullstack passionné par la programmation et les nouvelles technologies. J&apos;ai commencé à apprendre le développement web en autodidacte en 2019. J&apos;ai acquis des compétences en HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB, Git, GitHub, et bien d&apos;autres technologies. J&apos;ai également une expérience en développement mobile avec React Native. Je suis actuellement en formation chez OpenClassrooms pour obtenir un diplôme de développeur d&apos;application web.
+                {aboutMe}
             </SectionText>
 
             <div className={styles.about__container}>

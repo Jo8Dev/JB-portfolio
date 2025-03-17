@@ -4,7 +4,8 @@
         "title": "Kasa - Plateforme de location",
         "images": [
             "/images/kasa.png",
-            "/images/kasa-2.png"
+            "/images/kasa-2.png",
+            "/images/kasa-3.png"
         ],
         "technologies": [
             "React",
@@ -26,6 +27,31 @@
     },
     {
         "id": "1",
+        "title": "Sophie Bluel - Architecte d'intérieur",
+        "images": [
+            "/images/sophie-bluel.png",
+            "/images/sophie-bluel-2.png",
+            "/images/sophie-bluel-3.png"
+        ],
+        "technologies": [
+            "JavaScript",
+            "Fetch API",
+            "JWT",
+            "HTML",
+            "CSS",
+            "Notion",
+            "Figma"
+        ],
+        "description": "Sophie Bluel est un projet de création d'une page web dynamique pour un architecte d'intérieur. J'ai développé la page de présentation des travaux de l'architecte, en utilisant JavaScript pour gérer les événements utilisateurs et manipuler le DOM. J'ai également créé une page de connexion pour l'administrateur et une modale pour l'upload de nouveaux médias. Ce projet m'a permis de renforcer mes compétences en gestion des interactions utilisateurs et en communication avec une API.",
+        "links": [
+            {
+                "url": "https://github.com/Jo8Dev/Portfolio-architecte-sophie-bluel",
+                "label": "GitHub"
+            }
+        ]
+    },
+    {
+        "id": "2",
         "title": "Mon vieux grimoire",
         "images": [
             "/images/mvg.png",
@@ -46,10 +72,6 @@
             {
                 "url": "https://github.com/jo8dev/Mon-vieux-grimoire",
                 "label": "GitHub"
-            },
-            {
-                "url": "https://autre-projet-demo.netlify.app",
-                "label": "Demo"
             }
         ]
     }

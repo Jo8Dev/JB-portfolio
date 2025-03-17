@@ -7,7 +7,7 @@ function Contact() {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending....");
+        setResult("Envoi en cours...");
         const formData = new FormData(event.target);
 
         formData.append("access_key", "8720cd99-0cd0-464f-9be5-a47812466e4f");
@@ -20,7 +20,7 @@ function Contact() {
         const data = await response.json();
 
         if (data.success) {
-            setResult("Form Submitted Successfully");
+            setResult("Le message a été envoyé avec succès!");
             event.target.reset();
         } else {
             console.log("Error", data);
@@ -34,18 +34,17 @@ function Contact() {
                 Contact
             </SectionTitle>
             <form onSubmit={onSubmit} className={styles.contact__form}>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Nom</label>
                 <input type="text" name="name" required />
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" required />
                 <label htmlFor="message">Message</label>
                 <textarea name="message" required></textarea>
-                <input type="hidden" name="access_key" value="8720cd99-0cd0-464f-9be5-a47812466e4f"></input>
-
                 <button type="submit" className={styles.contact__button}>Envoyer le message</button>
 
             </form>
             <span>{result}</span>
+
 
         </section>
     );

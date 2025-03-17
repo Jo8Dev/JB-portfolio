@@ -39,6 +39,11 @@ function Carousel({ images }) {
                             src={image}
                             alt={`Slide ${index + 1}`}
                             className={styles.carousel__image}
+                            style={{ // Empêcher le glissement de l'image qui cause un effet bleu de selection
+                                userSelect: 'none',
+                                WebkitUserDrag: 'none'
+                            }}
+                            draggable="false"
                         />
                     </SwiperSlide>
                 ))}

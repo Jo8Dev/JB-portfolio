@@ -12,6 +12,7 @@ import tailwindcss from './tailwindcss.png'
 import www from './www.png'
 import api from './api.png'
 import tools from './tools.png'
+import arrowUp from './up-arrow.png'
 
 export {
     html,
@@ -27,5 +28,6 @@ export {
     tailwindcss,
     www,
     api,
-    tools
+    tools,
+    arrowUp
 }

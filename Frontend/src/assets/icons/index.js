@@ -13,6 +13,7 @@ import www from './www.png'
 import api from './api.png'
 import tools from './tools.png'
 import arrowUp from './up-arrow.png'
+import github from './github.png'
 
 export {
     html,
@@ -29,5 +30,6 @@ export {
     www,
     api,
     tools,
-    arrowUp
+    arrowUp,
+    github
 }

@@ -69,6 +69,8 @@ $container-padding: 20px;
     }
 
     &__stackContainer {
+        @include m.flex-column;
+        gap: 30px;
         grid-row: 2 / span 1;
         grid-column: 4 / span 1;
         @include m.card-shadow-inset;
@@ -76,6 +78,7 @@ $container-padding: 20px;
         @include m.responsive(mobile) {
             grid-row: auto;
             grid-column: 1;
+            gap: 0;
         }
     }
 

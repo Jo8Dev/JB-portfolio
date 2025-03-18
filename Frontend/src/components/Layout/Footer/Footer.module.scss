@@ -11,22 +11,26 @@
     width: 100%;
     min-height: 60px;
 
-    &__logo {
+    &__logo,
+    &__arrowUp,
+    &__social {
         @include m.logo;
     }
 
-    &__arrowUp {
-        @include m.logo;
+    &__socials {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
     }
 
-}
+    .top {
+        // Styles existants...
+        transition: all 0.3s ease; // Transition douce sur toutes les propriétés
 
-.top {
-    // Styles existants...
-    transition: all 0.3s ease; // Transition douce sur toutes les propriétés
-
-    &:hover {
-        transform: translateY(-5px); // Monte légèrement au survol
-        color: v.$tertiary-color; // Changement de couleur au survol
+        &:hover {
+            transform: translateY(-5px); // Monte légèrement au survol
+            color: v.$tertiary-color; // Changement de couleur au survol
+        }
     }
 }

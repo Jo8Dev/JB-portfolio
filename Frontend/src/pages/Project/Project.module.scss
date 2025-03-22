@@ -171,9 +171,11 @@ $container-padding: 20px;
         padding: 10px 20px;
         transition: all 0.3s ease;
 
-        &:hover {
-            color: v.$tertiary-color;
-            box-shadow: none;
+        @media (hover: hover) {
+            &:hover {
+                color: v.$tertiary-color;
+                box-shadow: none;
+            }
         }
 
         &:active {
@@ -184,5 +186,6 @@ $container-padding: 20px;
 
     @include m.responsive(mobile) {
         grid-template-columns: 1fr;
+
     }
 }

@@ -10,9 +10,11 @@
     cursor: pointer;
     transition: all 0.2s;
 
-    &:hover {
-        box-shadow: none;
-        color: v.$tertiary-color;
+    @media (hover: hover) {
+        &:hover {
+            color: v.$tertiary-color;
+            box-shadow: none;
+        }
     }
 
     &:active {

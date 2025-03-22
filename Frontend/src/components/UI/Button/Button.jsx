@@ -2,7 +2,7 @@ import styles from './Button.module.scss'
 import { Link } from "react-router-dom"
 import PropTypes from 'prop-types';
 
-function Button({ text, link, onClick, disabled }) {
+function Button({ text, link, onClick, disabled, img }) {
     // Si onClick est fourni, utiliser un bouton avec gestionnaire d'événement
     if (onClick) {
         return (
@@ -12,8 +12,9 @@ function Button({ text, link, onClick, disabled }) {
                 disabled={disabled}
             >
                 {text}
+                <img src={img} alt={text} />
             </button>
-        );
+        )
     }
 
     // Sinon, utiliser un Link (comportement existant)
@@ -30,13 +31,14 @@ Button.propTypes = {
     text: PropTypes.string.isRequired,
     link: PropTypes.string,
     onClick: PropTypes.func,
-    disabled: PropTypes.bool
-};
+    disabled: PropTypes.bool,
+    img: PropTypes.string
+}
 
 Button.defaultProps = {
     link: null,
     onClick: null,
     disabled: false
-};
+}
 
 export default Button;

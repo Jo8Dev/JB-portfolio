@@ -16,4 +16,8 @@
             @include m.flex-column
         }
     }
+
+    @include m.responsive(mobile) {
+        gap: 10px;
+    }
 }

@@ -14,6 +14,8 @@ import api from './api.png'
 import tools from './tools.png'
 import arrowUp from './up-arrow.png'
 import github from './github.png'
+import arrowRight from './flèche-droite.png'
+import arrowLeft from './flèche-gauche.png'
 
 export {
     html,
@@ -31,5 +33,7 @@ export {
     api,
     tools,
     arrowUp,
-    github
+    github,
+    arrowRight,
+    arrowLeft
 }

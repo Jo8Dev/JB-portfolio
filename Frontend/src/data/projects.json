@@ -3,9 +3,9 @@
         "id": "0",
         "title": "Kasa - Plateforme de location",
         "images": [
-            "/images/kasa.png",
-            "/images/kasa-2.png",
-            "/images/kasa-3.png"
+            "images/kasa.png",
+            "images/kasa-2.png",
+            "images/kasa-3.png"
         ],
         "technologies": [
             "React",
@@ -18,10 +18,6 @@
             {
                 "url": "https://github.com/jo8dev/kasa",
                 "label": "GitHub"
-            },
-            {
-                "url": "target_blank",
-                "label": "Demo"
             }
         ]
     },
@@ -29,9 +25,9 @@
         "id": "1",
         "title": "Sophie Bluel - Architecte d'intérieur",
         "images": [
-            "/images/sophie-bluel.png",
-            "/images/sophie-bluel-2.png",
-            "/images/sophie-bluel-3.png"
+            "images/sophie-bluel.png",
+            "images/sophie-bluel-2.png",
+            "images/sophie-bluel-3.png"
         ],
         "technologies": [
             "JavaScript",
@@ -54,9 +50,9 @@
         "id": "2",
         "title": "Mon vieux grimoire",
         "images": [
-            "/images/mvg.png",
-            "/images/mvg-2.png",
-            "/images/mvg-3.png"
+            "images/mvg.png",
+            "images/mvg-2.png",
+            "images/mvg-3.png"
         ],
         "technologies": [
             "NodeJs",

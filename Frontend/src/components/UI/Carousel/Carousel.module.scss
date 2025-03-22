@@ -41,20 +41,27 @@
     :global(.swiper-button-prev),
     :global(.swiper-button-next) {
         color: v.$secondary-color;
-        background: rgba(v.$primary-color, 0.9);
+        @include m.border-radius;
+        transition: all 0.2s;
         width: 40px;
         height: 40px;
-        @include m.card-shadow-inset;
+        @include m.card-shadow;
 
+        &:hover {
+            color: v.$tertiary-color;
+            box-shadow: none;
+        }
+
+        &:active {
+            @include m.card-shadow-inset;
+            color: rgba(v.$tertiary-color, 0.5);
+        }
 
         &::after {
             font-size: 18px;
         }
 
-        &:hover {
-            color: v.$tertiary-color;
-            @include m.card-shadow-dark;
-        }
+
 
         @include m.responsive(mobile) {
             display: none;

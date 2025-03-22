@@ -34,20 +34,33 @@
 
     button {
         @include m.card-shadow;
-        border-radius: 10px;
-        height: 40px;
-        padding: 0 15px;
+        color: v.$secondary-color;
+        border-radius: 15px;
+        padding: 0.7em 1.7em;
+        max-width: 210px;
+        font-size: 18px;
         margin: auto;
+        cursor: pointer;
+        transition: all 0.2s;
 
         &:hover {
             box-shadow: none;
-
+            color: v.$tertiary-color;
         }
 
         &:active {
             @include m.card-shadow-inset;
-            border-radius: 10px;
-            color: v.$tertiary-color;
+            border-radius: 15px;
+            color: rgba(v.$tertiary-color, 0.5);
+        }
+
+        // Style pour l'état désactivé
+        &:disabled {
+            @include m.card-shadow-inset;
+            border-radius: 15px;
+            color: #a0a0a0;
+            cursor: not-allowed;
+            opacity: 0.7;
         }
     }
 }

@@ -18,7 +18,8 @@ function About() {
                 animationProps={{
                     initial: { opacity: 0, scale: 0 },
                     whileInView: { opacity: 1, scale: 1 },
-                    transition: { duration: 1.2, delay: 0.3 }
+                    viewport: { once: true, amount: 1 },
+                    transition: { duration: 0.8 }
                 }}
             >
                 {aboutMe}
@@ -31,7 +32,7 @@ function About() {
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
                         viewport={{ once: true, amount: 0.5 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        transition={{ duration: 0.8 }}
                     ></motion.div>
 
                     <div className={styles.about__imageContainer}>
@@ -42,7 +43,7 @@ function About() {
                             initial={{ opacity: 0, rotate: 180 }}
                             whileInView={{ opacity: 1, rotate: 0 }}
                             viewport={{ once: true, amount: 0.5 }}
-                            transition={{ duration: 0.8, delay: 1 }}
+                            transition={{ duration: 0.8, delay: 0.5 }}
                         />
                     </div>
                 </div>

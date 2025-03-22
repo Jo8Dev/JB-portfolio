@@ -51,4 +51,8 @@
         border-radius: 50%;
         object-fit: cover;
     }
+
+    @include m.responsive(mobile) {
+        gap: 10px;
+    }
 }

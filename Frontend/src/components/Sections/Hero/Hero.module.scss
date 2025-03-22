@@ -2,7 +2,7 @@
 
 .hero {
     @include m.flex-center;
-    height: 96vh;
+    height: 98vh;
     width: 100%;
     /* Fixe l'image pendant le scroll */
     background-attachment: fixed;
@@ -12,6 +12,10 @@
     background-position: center;
     /* Empêche l'image de se répéter en fonction de la taille d'écran */
     background-repeat: no-repeat;
-    background-image: url("../../../assets/images/BgLighter.webp");
+    background-image: url("../../../assets/images/BgLighterOpti.avif");
 
+    @include m.responsive(mobile) {
+        background-image: url("../../../assets/images/BgLighterOptiMobile.avif");
+        background-attachment: scroll;
+    }
 }

@@ -1,9 +1,10 @@
-import styles from './ProjectLayout.module.scss'
+import styles from './Project.module.scss'
 import SectionTitle from '../../components/UI/SectionTitle/SectionTitle'
 import Carousel from '../../components/UI/Carousel/Carousel'
 import projects from '../../data/projects.json'
 import { useParams, Navigate, useNavigate } from 'react-router-dom'
 import Button from '../../components/UI/Button/Button'
+import { arrowRight, arrowLeft } from '../../assets/icons'
 
 function Project() {
     const { id } = useParams();
@@ -81,12 +82,12 @@ function Project() {
 
             <div className={styles.projectLayout__navigation}>
                 <Button
-                    text="<-"
+                    img={arrowLeft}
                     onClick={() => handleNavigation(previousProjectId)}
                     disabled={!hasPrevious}
                 />
                 <Button
-                    text="->"
+                    img={arrowRight}
                     onClick={() => handleNavigation(nextProjectId)}
                     disabled={!hasNext}
                 />

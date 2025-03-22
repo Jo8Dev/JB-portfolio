@@ -2,6 +2,5 @@
 @use "../../../assets/styles/variables" as v;
 
 .sectionTitle {
-    @include m.h2-size;
     color: v.$tertiary-color;
 }

@@ -25,13 +25,6 @@
     width: 90%;
 }
 
-//Taille de la police de caractère H2
-@mixin h2-size {
-    font-size: clamp(18px, 4.17vw, 60px);
-    font-weight: 700;
-    text-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-}
-
 //--Mixin pour éviter les duplications de code--//
 
 //Animations du logo
@@ -51,8 +44,8 @@
 
 //Taille de la carte Hero et HeroBackground
 @mixin hero-card-size {
-    width: clamp(280.5px, 50vw, 628px);
-    height: clamp(243.6px, 29.65vw, 427px);
+    width: clamp(280.5px, 65vw, 628px);
+    height: auto;
 }
 
 //Ombre sur les qui ressortent

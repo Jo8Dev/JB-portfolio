@@ -120,15 +120,12 @@ $container-padding: 20px;
 
     &__projectTitle {
         color: v.$tertiary-color;
-        font-size: 1.5rem;
-        font-weight: 700;
         text-align: center;
         @include m.text-shadow;
     }
 
     &__subtitle {
         color: v.$secondary-color;
-        font-size: 1.2rem;
         margin-bottom: 15px;
         padding-bottom: 8px;
         border-bottom: 1px solid rgba(v.$secondary-color, 0.2);
@@ -144,7 +141,6 @@ $container-padding: 20px;
     &__technology {
         @include m.card-shadow-inset;
         @include m.border-radius;
-        font-size: 0.9rem;
         padding: 8px;
     }
 

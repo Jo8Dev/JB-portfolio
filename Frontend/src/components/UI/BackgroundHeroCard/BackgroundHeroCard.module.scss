@@ -11,9 +11,13 @@
     background: linear-gradient(180deg, rgba(85, 0, 250, 1) 30%, rgba(203, 0, 183, 1) 100%);
     color: v.$tertiary-color;
 
-    @include m.responsive(mobile-medium) {
+    &__title,
+    &__description {
+        visibility: hidden;
+    }
 
-        height: clamp(260px, 36.67vw, 528px);
+    @include m.responsive(mobile-medium) {
+        height: auto;
         width: clamp(260px, 36.67vw, 528px);
     }
 }

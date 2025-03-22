@@ -17,6 +17,12 @@ $container-padding: 20px;
     &__sectionTitle {
         margin-bottom: 40px;
     }
+
+    &__navigation {
+        @include m.flex-center;
+        gap: 10px;
+        height: 100px;
+    }
 }
 
 
@@ -170,12 +176,6 @@ $container-padding: 20px;
             @include m.card-shadow-inset;
             border-radius: 15px;
         }
-    }
-
-    &__navigation {
-        @include m.flex-center;
-        gap: 10px;
-        height: 100px;
     }
 
     @include m.responsive(mobile) {

@@ -38,6 +38,19 @@ function Project() {
                 Projets
             </SectionTitle>
 
+            <div className={styles.container__navigation}>
+                <Button
+                    img={arrowLeft}
+                    onClick={() => handleNavigation(previousProjectId)}
+                    disabled={!hasPrevious}
+                />
+                <Button
+                    img={arrowRight}
+                    onClick={() => handleNavigation(nextProjectId)}
+                    disabled={!hasNext}
+                />
+            </div>
+
             <div className={styles.projectLayout}>
                 {/* Carousel au lieu d'image statique */}
                 <div className={styles.projectLayout__carousel}>
@@ -80,18 +93,6 @@ function Project() {
                 </div>
             </div>
 
-            <div className={styles.projectLayout__navigation}>
-                <Button
-                    img={arrowLeft}
-                    onClick={() => handleNavigation(previousProjectId)}
-                    disabled={!hasPrevious}
-                />
-                <Button
-                    img={arrowRight}
-                    onClick={() => handleNavigation(nextProjectId)}
-                    disabled={!hasNext}
-                />
-            </div>
         </section>
     );
 }

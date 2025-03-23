@@ -1,0 +1,101 @@
+[
+    {
+        "id": "0",
+        "title": "Kasa - Plateforme de location",
+        "images": [
+            "images/kasa.png",
+            "images/kasa-2.png",
+            "images/kasa-3.png"
+        ],
+        "technologies": [
+            "React",
+            "React Router DOM",
+            "SCSS",
+            "JavaScript"
+        ],
+        "description": "KASA est un projet de développement d'une application web de type Airbnb, où j'ai conçu le front-end en utilisant React. L'objectif était de créer des composants réutilisables pour gérer l'affichage des logements, les détails des annonces et les interactions des utilisateurs. Le routage a été géré avec React Router DOM pour une navigation fluide entre les différentes pages de l'application. Ce projet m'a permis de mettre en pratique les bonnes pratiques de développement React tout en assurant une interface moderne et maintenable.",
+        "links": [
+            {
+                "url": "https://github.com/jo8dev/kasa",
+                "label": "GitHub"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "title": "Sophie Bluel - Architecte d'intérieur",
+        "images": [
+            "images/sophie-bluel.png",
+            "images/sophie-bluel-2.png",
+            "images/sophie-bluel-3.png"
+        ],
+        "technologies": [
+            "JavaScript",
+            "Fetch API",
+            "JWT",
+            "HTML",
+            "CSS",
+            "Notion",
+            "Figma"
+        ],
+        "description": "Sophie Bluel est un projet de création d'une page web dynamique pour un architecte d'intérieur. J'ai développé la page de présentation des travaux de l'architecte, en utilisant JavaScript pour gérer les événements utilisateurs et manipuler le DOM. J'ai également créé une page de connexion pour l'administrateur et une modale pour l'upload de nouveaux médias. Ce projet m'a permis de renforcer mes compétences en gestion des interactions utilisateurs et en communication avec une API.",
+        "links": [
+            {
+                "url": "https://github.com/Jo8Dev/Portfolio-architecte-sophie-bluel",
+                "label": "GitHub"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Mon vieux grimoire",
+        "images": [
+            "images/mvg.png",
+            "images/mvg-2.png",
+            "images/mvg-3.png"
+        ],
+        "technologies": [
+            "NodeJs",
+            "JavaScript",
+            "MongoDB",
+            "Mongoose",
+            "Express",
+            "JWT",
+            "Bcrypt"
+        ],
+        "description": "Mon Vieux Grimoire est une application web pour gérer une bibliothèque personnelle. J'ai développé le backend avec Node.js et Express, en implémentant des opérations CRUD pour l'ajout, la modification et la suppression de livres. La connexion des utilisateurs est sécurisée grâce à des tokens JWT et les mots de passe sont cryptés avant d'être stockés dans MongoDB. J'ai également créé des schémas Mongoose pour structurer les données, ce qui m'a permis de renforcer mes compétences en backend.",
+        "links": [
+            {
+                "url": "https://github.com/jo8dev/Mon-vieux-grimoire",
+                "label": "GitHub"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Nina Carducci - Photographe",
+        "images": [
+            "images/nina-carducci.avif",
+            "images/nina-carducci-2.avif",
+            "images/nina-carducci-3.avif"
+        ],
+        "technologies": [
+            "SEO",
+            "Accessibilité",
+            "Schema.org",
+            "Balises meta",
+            "Lighthouse",
+            "Devtools",
+            "GTmetrix",
+            "AVIF",
+            "WEBP"
+        ],
+        "description": "Nina Carducci est un projet où j'ai optimisé le site d'une photographe en améliorant la performance et le référencement. J'ai utilisé Lighthouse et DevTools pour le débogage et l'optimisation, en réduisant les temps de chargement et en améliorant l'accessibilité. Le SEO a été renforcé avec des balises meta, des données structurées via Schema.org, et l'intégration de Rich Snippets pour mieux apparaître dans les résultats de recherche. J'ai également optimisé les images avec les formats AVIF et WEBP, et testé les performances via GTmetrix.",
+        "links": [
+            {
+                "url": "https://github.com/Jo8Dev/Nina-Carducci-Dev",
+                "label": "GitHub"
+            }
+        ]
+    }
+]

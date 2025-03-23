@@ -1,0 +1,72 @@
+{
+    "stack": [
+        {
+            "id": "stackHtml",
+            "icon": "icons/html.png",
+            "name": "HTML",
+            "alt": "logo HTML"
+        },
+        {
+            "id": "stackCss",
+            "icon": "icons/css.png",
+            "name": "CSS",
+            "alt": "logo CSS"
+        },
+        {
+            "id": "stackSass",
+            "icon": "icons/sass.png",
+            "name": "SASS",
+            "alt": "logo SASS"
+        },
+        {
+            "id": "stackJs",
+            "icon": "icons/js.png",
+            "name": "JavaScript",
+            "alt": "logo JavaScript"
+        },
+        {
+            "id": "stackReact",
+            "icon": "icons/react.png",
+            "name": "React",
+            "alt": "logo React"
+        },
+        {
+            "id": "stackNode",
+            "icon": "icons/nodeJs.png",
+            "name": "Node.js",
+            "alt": "logo Node.js"
+        },
+        {
+            "id": "stackMongo",
+            "icon": "icons/figma.png",
+            "name": "MongoDB",
+            "alt": "logo Figma"
+        }
+    ],
+    "inProgress": [
+        {
+            "id": "progressReactNative",
+            "icon": "icons/react.png",
+            "name": "React Native",
+            "alt": "logo React Native"
+        },
+        {
+            "id": "progressTypescript",
+            "icon": "icons/typescript.png",
+            "name": "TypeScript",
+            "alt": "logo TypeScript"
+        },
+        {
+            "id": "progressPostgres",
+            "icon": "icons/postgresql.png",
+            "name": "PostgreSQL",
+            "alt": "logo PostgreSQL"
+        },
+        {
+            "id": "progressTailwind",
+            "icon": "icons/tailwindcss.png",
+            "name": "Tailwind CSS",
+            "alt": "logo Tailwind CSS"
+        }
+    ]
+}

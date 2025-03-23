@@ -38,8 +38,14 @@
         },
         {
             "id": "stackMongo",
-            "icon": "icons/figma.png",
+            "icon": "icons/mongodb.png",
             "name": "MongoDB",
+            "alt": "logo mongoDB"
+        },
+        {
+            "id": "stackFigma",
+            "icon": "icons/figma.png",
+            "name": "Figma",
             "alt": "logo Figma"
         }
     ],

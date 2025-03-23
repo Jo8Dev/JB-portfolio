@@ -11,7 +11,7 @@ function Footer() {
     useEffect(() => {
         const handleScroll = () => {
             // Affiche le bouton après avoir défilé de 300px
-            setShowScrollButton(window.scrollY > 300);
+            setShowScrollButton(window.scrollY > 300)
         }
 
         // Vérifie à l'initialisation

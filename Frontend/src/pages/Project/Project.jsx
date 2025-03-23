@@ -1,31 +1,59 @@
-import styles from './Project.module.scss'
-import SectionTitle from '../../components/UI/SectionTitle/SectionTitle'
-import Carousel from '../../components/UI/Carousel/Carousel'
-import projects from '../../data/projects.json'
-import { useParams, Navigate, useNavigate } from 'react-router-dom'
-import Button from '../../components/UI/Button/Button'
-import { arrowRight, arrowLeft } from '../../assets/icons'
+import { useEffect } from 'react';
+import styles from './Project.module.scss';
+import SectionTitle from '../../components/UI/SectionTitle/SectionTitle';
+import Carousel from '../../components/UI/Carousel/Carousel';
+import { useParams, useNavigate } from 'react-router-dom';
+import Button from '../../components/UI/Button/Button';
+import { arrowRight, arrowLeft } from '../../assets/icons';
+import { projectUrl } from '../../services/config';
+import { useFetch } from '../../hooks/useFetch';
 
 function Project() {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    if (!id) {
-        return <Navigate to="/project/0" />
-    }
+    // Fetch tous les projets
+    const { data: projects, loading, error } = useFetch(projectUrl);
 
-    // Trouver l'index du projet actuel dans le tableau
+    // Redirige si l'ID n'existe pas
+    useEffect(() => {
+        if (!loading && !error && projects) {
+            const projectExists = projects.some(p => p.id === id);
+            if (!projectExists) {
+                navigate('/project/0', { replace: true });
+            }
+        }
+    }, [id, projects, loading, error, navigate]);
+
+    // Gestion des états de chargement et d'erreur
+    if (loading) return (
+        <section className={styles.container}>
+            <SectionTitle className={styles.container__sectionTitle}>Projets</SectionTitle>
+            <div className={styles.loading}>Chargement du projet...</div>
+        </section>
+    );
+
+    if (error) return (
+        <section className={styles.container}>
+            <SectionTitle className={styles.container__sectionTitle}>Projets</SectionTitle>
+            <div className={styles.error}>Impossible de charger les projets: {error}</div>
+        </section>
+    );
+
+    // Si pas encore de données, ne rien afficher
+    if (!projects) return null;
+
+    // Trouver le projet actuel
     const currentProjectIndex = projects.findIndex(p => p.id === id);
     const project = currentProjectIndex !== -1 ? projects[currentProjectIndex] : projects[0];
 
-    // Calculer les indices et IDs des projets précédent et suivant
+    // Navigation
     const hasPrevious = currentProjectIndex > 0;
     const hasNext = currentProjectIndex < projects.length - 1;
 
     const previousProjectId = hasPrevious ? projects[currentProjectIndex - 1].id : null;
     const nextProjectId = hasNext ? projects[currentProjectIndex + 1].id : null;
 
-    // Navigation entre projets
     const handleNavigation = (projectId) => {
         if (projectId !== null) {
             navigate(`/project/${projectId}`);
@@ -52,9 +80,9 @@ function Project() {
             </div>
 
             <div className={styles.projectLayout}>
-                {/* Carousel au lieu d'image statique */}
                 <div className={styles.projectLayout__carousel}>
-                    <Carousel images={project.images} />
+                    {/* La clé force la réinitialisation du carousel quand l'ID change */}
+                    <Carousel images={project.images} key={project.id} />
                 </div>
 
                 <div className={styles.projectLayout__titleContainer}>
@@ -92,7 +120,6 @@ function Project() {
                     </div>
                 </div>
             </div>
-
         </section>
     );
 }

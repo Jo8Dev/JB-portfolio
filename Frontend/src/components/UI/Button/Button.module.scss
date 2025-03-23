@@ -6,6 +6,7 @@
     border-radius: 15px;
     padding: 0.7em 1.7em;
     font-size: clamp(14px, 1vw, 18px);
+    color: v.$secondary-color;
     min-width: 80px;
     cursor: pointer;
     transition: all 0.2s;

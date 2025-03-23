@@ -6,6 +6,7 @@ import Stack from "../../components/Sections/Stack/Stack"
 
 function Home() {
 
+
     return (
         <>
             <Hero />

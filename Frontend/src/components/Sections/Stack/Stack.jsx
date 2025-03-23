@@ -1,24 +1,30 @@
 import StackCard from '../../UI/StackCard/StackCard'
 import Button from '../../UI/Button/Button'
 import styles from './Stack.module.scss'
-import { html, css, javascript, react, node, sass, mongodb, figma } from '../../../assets/icons/index'
 import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import SectionText from '../../UI/SectionText/SectionText'
+import { stackUrl } from '../../../services/config'
+import { useFetch } from '../../../hooks/useFetch'
 
 function Stack() {
-    const technologies = [
-        { icon: html, name: 'Html' },
-        { icon: css, name: 'Css' },
-        { icon: sass, name: 'Sass' },
-        { icon: javascript, name: 'Javascript' },
-        { icon: react, name: 'React' },
-        { icon: node, name: 'NodeJs' },
-        { icon: mongodb, name: 'MongoDB' },
-        { icon: figma, name: 'Figma' }
-    ]
 
     const title = "Technologies utilisées"
     const description = "Voici les technologies que j'emploie pour développer des applications web performantes et adaptées aux besoins de mes projets."
+    const { data, loading, error } = useFetch(stackUrl)
+
+    if (loading)
+        return (
+            <section className={styles.skills}>
+                <SectionTitle className={styles.skills__title}>{title}</SectionTitle>
+                <div className={styles.skills__loading}>Chargement...</div>
+            </section>
+        )
+    if (error) return (
+        <section className={styles.skills}>
+            <SectionTitle className={styles.skills__title}>{title}</SectionTitle>
+            <div className={styles.skills__error}>Impossible de charger les compétences</div>
+        </section>
+    )
 
     return (
         <section className={styles.stack}>
@@ -31,11 +37,11 @@ function Stack() {
             </SectionText>
 
             <div className={styles.stack__container}>
-                {technologies.map((tech, index) => (
+                {data.stack.map((tech, index) => (
                     <StackCard
-                        key={tech.name}
+                        key={tech.id}
                         icon={tech.icon}
-                        alt={`logo ${tech.name}`}
+                        alt={tech.alt}
                         title={tech.name}
                         animationProps={{
                             transition: { delay: index * 0.1 }

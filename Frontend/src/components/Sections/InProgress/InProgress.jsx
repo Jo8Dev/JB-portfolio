@@ -1,19 +1,30 @@
 import styles from './InProgress.module.scss'
-import { tailwindcss, postgresql, typescript, react } from "../../../assets/icons/index"
 import StackCard from '../../UI/StackCard/StackCard'
 import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import SectionText from '../../UI/SectionText/SectionText'
+import { stackUrl } from '../../../services/config'
+import { useFetch } from '../../../hooks/useFetch'
 
 function InProgress() {
-    const technologies = [
-        { icon: react, name: 'React Native' },
-        { icon: typescript, name: 'TypeScript' },
-        { icon: postgresql, name: 'PostgreSQL' },
-        { icon: tailwindcss, name: 'TailwindCss' }
-    ]
 
     const title = "En cours d'apprentissage"
     const description = "La vie de développeur est un apprentissage constant. Voici les technologies que je perfectionne actuellement."
+
+    const { data, loading, error } = useFetch(stackUrl)
+
+    if (loading)
+        return (
+            <section className={styles.inProgress}>
+                <SectionTitle className={styles.inProgress__title}>{title}</SectionTitle>
+                <div className={styles.inProgress__loading}>Chargement...</div>
+            </section>
+        )
+    if (error) return (
+        <section className={styles.inProgress}>
+            <SectionTitle className={styles.inProgress__title}>{title}</SectionTitle>
+            <div className={styles.inProgress__error}>Impossible de charger les compétences</div>
+        </section>
+    )
 
     return (
         <section className={styles.inProgress}>
@@ -26,11 +37,11 @@ function InProgress() {
             </SectionText>
 
             <div className={styles.inProgress__container}>
-                {technologies.map((tech, index) => (
+                {data.inProgress.map((tech, index) => (
                     <StackCard
-                        key={tech.name}
+                        key={tech.id}
                         icon={tech.icon}
-                        alt={`logo ${tech.name}`}
+                        alt={tech.alt}
                         title={tech.name}
                         animationProps={{
                             transition: { delay: index * 0.1, ease: "easeOut" }

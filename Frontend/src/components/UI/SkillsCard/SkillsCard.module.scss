@@ -10,12 +10,14 @@
     gap: 10px;
     padding: 30px;
     width: 476px;
-    // width: clamp(144px, 25vw, 476px);
     height: 400px;
 
     &__subtitle {
         color: v.$tertiary-color;
         @include m.text-shadow;
+        font-size: clamp(17px, 1.5vw, 24px);
+        font-weight: 600;
+        line-height: 1.4;
     }
 
     &__description {
@@ -28,6 +30,7 @@
     &__icon {
         @include m.card-shadow-inset;
         padding: 5px;
+        max-width: 96px;
     }
 
     @include m.responsive(mobile) {

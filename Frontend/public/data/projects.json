@@ -63,10 +63,37 @@
             "JWT",
             "Bcrypt"
         ],
-        "description": "Mon Vieux Grimoire est une application web que j'ai développée dans le cadre de ma formation OpenClassrooms. Elle permet aux utilisateurs de s'inscrire, se connecter, puis d'ajouter, modifier et supprimer des livres dans leur bibliothèque personnelle. Les utilisateurs peuvent également noter les livres des autres. Le projet utilise des technologies telles que Node.js, MongoDB et React, et m'a permis de développer mes compétences en développement full-stack tout en offrant une interface intuitive et fluide.",
+        "description": "Mon Vieux Grimoire est une application web pour gérer une bibliothèque personnelle. J'ai développé le backend avec Node.js et Express, en implémentant des opérations CRUD pour l'ajout, la modification et la suppression de livres. La connexion des utilisateurs est sécurisée grâce à des tokens JWT et les mots de passe sont cryptés avant d'être stockés dans MongoDB. J'ai également créé des schémas Mongoose pour structurer les données, ce qui m'a permis de renforcer mes compétences en backend.",
         "links": [
             {
                 "url": "https://github.com/jo8dev/Mon-vieux-grimoire",
+                "label": "GitHub"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Nina Carducci - Photographe",
+        "images": [
+            "images/nina-carducci.avif",
+            "images/nina-carducci-2.avif",
+            "images/nina-carducci-3.avif"
+        ],
+        "technologies": [
+            "SEO",
+            "Accessibilité",
+            "Schema.org",
+            "Balises meta",
+            "Lighthouse",
+            "Devtools",
+            "GTmetrix",
+            "AVIF",
+            "WEBP"
+        ],
+        "description": "Nina Carducci est un projet où j'ai optimisé le site d'une photographe en améliorant la performance et le référencement. J'ai utilisé Lighthouse et DevTools pour le débogage et l'optimisation, en réduisant les temps de chargement et en améliorant l'accessibilité. Le SEO a été renforcé avec des balises meta, des données structurées via Schema.org, et l'intégration de Rich Snippets pour mieux apparaître dans les résultats de recherche. J'ai également optimisé les images avec les formats AVIF et WEBP, et testé les performances via GTmetrix.",
+        "links": [
+            {
+                "url": "https://github.com/Jo8Dev/Nina-Carducci-Dev",
                 "label": "GitHub"
             }
         ]

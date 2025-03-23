@@ -57,6 +57,24 @@
             "alt": "logo TypeScript"
         },
         {
+            "id": "progressWordpress",
+            "icon": "icons/wordpress.png",
+            "name": "WordPress",
+            "alt": "logo WordPress"
+        },
+        {
+            "id": "progressPhp",
+            "icon": "icons/php.png",
+            "name": "PHP",
+            "alt": "logo PHP"
+        },
+        {
+            "id": "progressLaravel",
+            "icon": "icons/laravel.png",
+            "name": "Laravel",
+            "alt": "logo Laravel"
+        },
+        {
             "id": "progressPostgres",
             "icon": "icons/postgresql.png",
             "name": "PostgreSQL",
@@ -67,6 +85,12 @@
             "icon": "icons/tailwindcss.png",
             "name": "Tailwind CSS",
             "alt": "logo Tailwind CSS"
+        },
+        {
+            "id": "progressBootstrap",
+            "icon": "icons/bootstrap.png",
+            "name": "Bootstrap",
+            "alt": "logo Bootstrap"
         }
     ]
 }

@@ -1,0 +1,20 @@
+[
+    {
+        "icon": "icons/www.png",
+        "alt": "world wide web logo",
+        "subtitle": "Développement de sites web :",
+        "description": "Création de sites web responsives, optimisés pour le référencement, et parfaitement adaptés aux besoins de votre entreprise."
+    },
+    {
+        "icon": "icons/tools.png",
+        "alt": "tools logo",
+        "subtitle": "Maintenance et évolution :",
+        "description": "Mise à jour, amélioration des performances et gestion des évolutions sur des projets existants pour garantir leur pérennité et leur efficacité."
+    },
+    {
+        "icon": "icons/api.png",
+        "alt": "api logo",
+        "subtitle": "Intégration d'API :",
+        "description": "Conception et intégration d'API pour optimiser les échanges entre systèmes internes ou avec des services tiers, améliorant ainsi l'interopérabilité des outils."
+    }
+]

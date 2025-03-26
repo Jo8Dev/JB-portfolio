@@ -34,11 +34,11 @@
 
     button {
         @include m.card-shadow;
+        font-weight: 400;
         color: v.$secondary-color;
-        border-radius: 15px;
+        border-radius: 10px;
         padding: 0.7em 1.7em;
         max-width: 210px;
-        font-size: 18px;
         margin: auto;
         cursor: pointer;
         transition: all 0.2s;
@@ -50,17 +50,9 @@
 
         &:active {
             @include m.card-shadow-inset;
-            border-radius: 15px;
+            border-radius: 10px;
             color: rgba(v.$tertiary-color, 0.5);
         }
 
-        // Style pour l'état désactivé
-        &:disabled {
-            @include m.card-shadow-inset;
-            border-radius: 15px;
-            color: #a0a0a0;
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
     }
 }

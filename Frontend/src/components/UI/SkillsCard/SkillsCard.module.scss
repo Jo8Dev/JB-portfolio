@@ -4,13 +4,13 @@
 .skillsCard {
     @include m.flex-column;
     @include m.border-radius;
-    @include m.card-shadow;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 30px;
     width: 476px;
     height: 400px;
+    transition: box-shadow 1s ease-in-out;;
 
     &__subtitle {
         color: v.$tertiary-color;
@@ -38,14 +38,9 @@
         margin-bottom: 0;
 
         &__description {
-            @include m.card-shadow-inset;
             @include m.border-radius;
             width: 100%;
 
-            &:hover {
-                box-shadow: none;
-                transition: box-shadow 0.5s ease-in-out;
-            }
         }
 
         &__icon {

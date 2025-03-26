@@ -5,6 +5,8 @@ import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import SectionText from '../../UI/SectionText/SectionText'
 import { stackUrl } from '../../../services/config'
 import { useFetch } from '../../../hooks/useFetch'
+import Loader from '../../UI/Loader/Loader'
+import SectionShadowInset from '../../UI/SectionShadowInset/SectionShadowInset'
 
 function Stack() {
 
@@ -16,7 +18,7 @@ function Stack() {
         return (
             <section className={styles.skills}>
                 <SectionTitle className={styles.skills__title}>{title}</SectionTitle>
-                <div className={styles.skills__loading}>Chargement...</div>
+                <div className={styles.skills__loading}><Loader/></div>
             </section>
         )
     if (error) return (
@@ -27,7 +29,7 @@ function Stack() {
     )
 
     return (
-        <section className={styles.stack}>
+        <SectionShadowInset className={styles.stack}>
             <SectionTitle className={styles.stack__title}>
                 {title}
             </SectionTitle>
@@ -50,7 +52,7 @@ function Stack() {
                 ))}
             </div>
             <Button text={"Consultez mes projets"} link={"project"} />
-        </section>
+        </SectionShadowInset>
     )
 }
 

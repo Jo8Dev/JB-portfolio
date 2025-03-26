@@ -4,13 +4,12 @@
 .stackCard {
     @include m.border-radius;
     @include m.flex-column;
-    @include m.card-shadow;
     align-items: center;
     flex-wrap: wrap;
     color: v.$secondary-color;
     min-width: 100px;
     padding: 5px;
-    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out 0.8s, transform 0.5s ease-in-out;
 
     &__icon {
         @include m.responsive(mobile) {

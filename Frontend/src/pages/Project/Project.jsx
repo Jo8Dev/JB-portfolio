@@ -7,6 +7,7 @@ import Button from '../../components/UI/Button/Button';
 import { arrowRight, arrowLeft } from '../../assets/icons';
 import { projectUrl } from '../../services/config';
 import { useFetch } from '../../hooks/useFetch';
+import Loader from '../../components/UI/Loader/Loader';
 
 function Project() {
     const { id } = useParams();
@@ -29,7 +30,7 @@ function Project() {
     if (loading) return (
         <section className={styles.container}>
             <SectionTitle className={styles.container__sectionTitle}>Projets</SectionTitle>
-            <div className={styles.loading}>Chargement du projet...</div>
+            <Loader />
         </section>
     );
 

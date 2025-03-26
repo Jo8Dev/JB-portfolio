@@ -7,16 +7,16 @@
     @include m.border-radius;
     padding: 30px;
     background-color: v.$primary-color;
-    animation: slideOut 4s ease-in-out forwards,
-        shadowAppear 3s ease-in-out 1s forwards;
+    animation: slideOut 2s ease-in-out forwards,
+        shadowAppear 1s ease-in-out 1s forwards;
     overflow: hidden;
 
     &__title {
         @include m.text-gradient;
         font-weight: 700;
         animation:
-            textShadowAppear 1s ease-in-out 4s forwards,
-            textShine 5s ease-in-out infinite alternate;
+            textShadowAppear 1s ease-in-out 2s forwards,
+            textShine 3s ease-in-out infinite alternate;
     }
 
     &__description {

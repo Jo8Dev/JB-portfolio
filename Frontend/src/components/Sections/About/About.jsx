@@ -5,23 +5,17 @@ import Button from '../../UI/Button/Button'
 import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import SectionText from '../../UI/SectionText/SectionText'
 import aboutMe from '../../../data/aboutMe.json'
+import SectionShadowInset from '../../UI/SectionShadowInset/SectionShadowInset'
 
 function About() {
 
     return (
-        <section className={styles.about}>
+        <SectionShadowInset className={styles.about}>
             <SectionTitle className={styles.about__title}>
                 À propos de moi
             </SectionTitle>
             {aboutMe.map((about) => (
-                <SectionText
-                    className={styles.about__description}
-                    animationProps={{
-                        initial: { opacity: 0, scale: 0 },
-                        whileInView: { opacity: 1, scale: 1 },
-                        viewport: { once: true, amount: 1 },
-                        transition: { duration: 0.8 }
-                    }}
+                <SectionText className={styles.about__description}
                     key={about.id}>
                     {about.description}
                 </SectionText>)
@@ -51,7 +45,7 @@ function About() {
                 </div>
             </div>
             <Button text={"Contactez moi"} link={"contact"} />
-        </section >
+        </SectionShadowInset>   
     )
 }
 

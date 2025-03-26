@@ -2,7 +2,6 @@
 @use "../../../assets/styles/variables" as v;
 
 .sectionText {
-    @include m.card-shadow-inset;
     @include m.text-shadow;
     @include m.border-radius;
     width: 40%;

@@ -6,10 +6,10 @@ function SkillsCard({ alt, description, icon, subtitle, animationProps }) {
     return (
         <motion.article
             className={styles.skillsCard}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, boxShadow: "none" }}
+            whileInView={{ opacity:1 ,boxShadow: "6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff" }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 4, ease: "easeOut" }}
             {...animationProps}
         >
             <img className={styles.skillsCard__icon} src={icon} alt={alt} />

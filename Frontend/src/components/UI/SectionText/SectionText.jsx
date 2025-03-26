@@ -6,10 +6,10 @@ function SectionText({ children, className, animationProps }) {
     return (
         <motion.p
             className={`${styles.sectionText} ${className || ''}`}
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ boxShadow: "none" }}
+            whileInView={{ boxShadow: "inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff" }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
             {...animationProps}
         >
             {children}

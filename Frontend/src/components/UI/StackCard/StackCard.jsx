@@ -6,10 +6,10 @@ function StackCard({ icon, alt, title, animationProps }) {
     return (
         <motion.article
             className={styles.stackCard}
-            initial={{ opacity: 0, rotateY: -180 }}
-            whileInView={{ opacity: 1, rotateY: 0 }}
+            initial={{ opacity: 0, rotateY: -180, boxShadow: "none" }}
+            whileInView={{ opacity: 1, rotateY: 0, boxShadow: "6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff" }}
             viewport={{ once: true, amount: 0.6 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
             {...animationProps} // Pour surcharger les valeurs par défaut
         >
             <img className={styles.stackCard__icon} src={icon} alt={alt} />

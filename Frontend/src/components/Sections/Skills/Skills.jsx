@@ -3,6 +3,7 @@ import SkillsCard from '../../UI/SkillsCard/SkillsCard'
 import SectionTitle from "../../UI/SectionTitle/SectionTitle"
 import { useFetch } from "../../../hooks/useFetch"
 import { skillsUrl } from "../../../services/config"
+import Loader from "../../UI/Loader/Loader"
 
 
 function Skills() {
@@ -13,7 +14,7 @@ function Skills() {
         return (
             <section className={styles.skills}>
                 <SectionTitle className={styles.skills__title}>{title}</SectionTitle>
-                <div className={styles.skills__loading}>Chargement...</div>
+                <Loader/>
             </section>
         )
     if (error) return (

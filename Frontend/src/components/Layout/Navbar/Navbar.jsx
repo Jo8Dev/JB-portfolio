@@ -22,15 +22,15 @@ function Navbar() {
 
     useEffect(() => {
         const checkScreenSize = () => {
-            setIsTablet(window.innerWidth <= 768)
+            setIsTablet(window.innerWidth <= 768) // Vérifie si l'écran est une tablette
         }
-        window.addEventListener('resize', checkScreenSize)
-        return () => window.removeEventListener('resize', checkScreenSize)
+        window.addEventListener('resize', checkScreenSize) // Ajoute l'écouteur d'événement
+        return () => window.removeEventListener('resize', checkScreenSize) // Nettoyage à la destruction du composant
     }, [])
 
     const handleBurgerClick = (isOpen) => {
         setIsMenuOpen(isOpen)
-        document.body.style.overflow = isOpen ? 'hidden' : 'auto'
+        document.body.style.overflow = isOpen ? 'hidden' : 'auto' // Empêche le défilement lorsque le menu est ouvert
     }
 
     const closeMenu = () => {

@@ -54,3 +54,14 @@
             100px 100px 80px rgba(0, 0, 0, 0.28);
     }
 }
+
+//Animation des liens de navigation
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}

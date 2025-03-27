@@ -13,7 +13,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     transition: transform 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     z-index: 1000;
@@ -50,8 +50,7 @@
     &.open .bar {
         &:nth-child(1) {
             transform: rotate(45deg) translate(4px, -2px);
-            width: 120%;
-            box-shadow: 0 0 10px rgba(v.$tertiary-color, 0.7);
+            width: 90%;
         }
 
         &:nth-child(2) {
@@ -61,8 +60,7 @@
 
         &:nth-child(3) {
             transform: rotate(-45deg) translate(4px, 2px);
-            width: 120%;
-            box-shadow: 0 0 10px rgba(v.$tertiary-color, 0.7);
+            width: 90%;
         }
     }
 

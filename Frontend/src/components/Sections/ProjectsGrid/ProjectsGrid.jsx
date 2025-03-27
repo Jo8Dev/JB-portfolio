@@ -22,7 +22,7 @@ function ProjectsGrid() {
                     <ProjectsGridCard
                         key={project.id}
                         {...project}
-                        index={index} // Transmettez l'index pour l'animation en cascade
+                        index={index} //transmet l'index pour l'animation
                     />
                 ))}
             </div>

@@ -23,8 +23,7 @@ export function useFetch(url) {
                     throw new Error(`Erreur HTTP: ${response.status}`)
                 }
 
-                const result = await response.json()
-                setData(result)
+                setData(await response.json())
             } catch (err) {
                 console.error("Erreur fetch:", err)
                 setError(err.message || "Une erreur est survenue lors du chargement des données")

@@ -15,7 +15,7 @@ function ProjectsGrid() {
     if (!projects) return null
 
     return (
-        <SectionShadowInset className={styles.projectsGrid}>
+        <section className={styles.projectsGrid}>
             <SectionTitle className={styles.projectsGrid__title}>Mes Projets</SectionTitle>
 
             <div className={styles.projectsGrid__container}>
@@ -28,7 +28,7 @@ function ProjectsGrid() {
                 ))}
             </div>
             <Button text={"Consultez mes projets"} link={"project"} />
-        </SectionShadowInset>
+        </section>
     );
 }
 export default ProjectsGrid;

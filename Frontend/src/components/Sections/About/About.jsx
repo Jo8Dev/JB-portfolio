@@ -4,7 +4,6 @@ import { motion } from 'motion/react'
 import Button from '../../UI/Button/Button'
 import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import SectionText from '../../UI/SectionText/SectionText'
-import SectionShadowInset from '../../UI/SectionShadowInset/SectionShadowInset'
 import { aboutMeUrl } from '../../../services/config'
 import { useFetch } from '../../../hooks/useFetch'
 import Loader from '../../UI/Loader/Loader'
@@ -17,7 +16,7 @@ function About() {
     if (!aboutMe) return null
 
     return (
-        <SectionShadowInset className={styles.about}>
+        <section className={styles.about}>
             <SectionTitle className={styles.about__title}>
                 À propos de moi
             </SectionTitle>
@@ -52,7 +51,7 @@ function About() {
                 </div>
             </div>
             <Button text={"Contactez moi"} link={"contact"} />
-        </SectionShadowInset>
+        </section>
     )
 }
 

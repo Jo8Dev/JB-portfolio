@@ -10,7 +10,7 @@
         @include m.flex-center;
         flex-wrap: wrap;
         gap: 30px;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     @include m.responsive(mobile) {

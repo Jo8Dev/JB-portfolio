@@ -3,14 +3,13 @@
 
 .stack {
     @include m.section-container;
-    @include m.card-shadow-inset;
     height: auto;
 
     &__container {
         @include m.flex-center;
         flex-wrap: wrap;
         gap: 30px;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     @include m.responsive(mobile) {

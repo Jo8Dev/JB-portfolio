@@ -3,7 +3,6 @@
 
 .about {
     @include m.section-container;
-    @include m.card-shadow-inset;
     @include m.border-radius;
     gap: 20px;
     height: auto;

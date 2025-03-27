@@ -5,6 +5,7 @@ import SectionText from '../../UI/SectionText/SectionText'
 import { stackUrl } from '../../../services/config'
 import { useFetch } from '../../../hooks/useFetch'
 import Loader from '../../UI/Loader/Loader'
+import SectionShadowInset from '../../UI/SectionShadowInset/SectionShadowInset'
 
 function InProgress() {
 
@@ -17,7 +18,7 @@ function InProgress() {
         return (
             <section className={styles.inProgress}>
                 <SectionTitle className={styles.inProgress__title}>{title}</SectionTitle>
-                <div className={styles.inProgress__loading}><Loader/></div>
+                <div className={styles.inProgress__loading}><Loader /></div>
             </section>
         )
     if (error) return (
@@ -28,7 +29,7 @@ function InProgress() {
     )
 
     return (
-        <section className={styles.inProgress}>
+        <SectionShadowInset className={styles.inProgress}>
             <SectionTitle className={styles.inProgress__title}>
                 {title}
             </SectionTitle>
@@ -50,7 +51,7 @@ function InProgress() {
                     />
                 ))}
             </div>
-        </section>
+        </SectionShadowInset>
     )
 }
 

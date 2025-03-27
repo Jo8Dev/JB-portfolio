@@ -1,5 +1,4 @@
 import StackCard from '../../UI/StackCard/StackCard'
-import Button from '../../UI/Button/Button'
 import styles from './Stack.module.scss'
 import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import SectionText from '../../UI/SectionText/SectionText'
@@ -18,7 +17,7 @@ function Stack() {
         return (
             <section className={styles.skills}>
                 <SectionTitle className={styles.skills__title}>{title}</SectionTitle>
-                <div className={styles.skills__loading}><Loader/></div>
+                <div className={styles.skills__loading}><Loader /></div>
             </section>
         )
     if (error) return (
@@ -51,7 +50,6 @@ function Stack() {
                     />
                 ))}
             </div>
-            <Button text={"Consultez mes projets"} link={"project"} />
         </SectionShadowInset>
     )
 }

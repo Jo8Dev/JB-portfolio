@@ -7,15 +7,15 @@
     @include m.border-radius;
     padding: 30px;
     background-color: v.$primary-color;
-    animation: slideOut 2s ease-in-out forwards,
-        shadowAppear 1s ease-in-out 1s forwards;
+    animation: slideOut 1s ease-in-out forwards,
+        shadowAppear 0.5s ease-in-out 0.5s forwards;
     overflow: hidden;
 
     &__title {
         @include m.text-gradient;
         font-weight: 700;
         animation:
-            textShadowAppear 1s ease-in-out 2s forwards,
+            textShadowAppear 1s ease-in-out 1s forwards,
             textShine 3s ease-in-out infinite alternate;
     }
 
@@ -30,8 +30,6 @@
         }
 
         width: clamp(260px, 36.67vw, 528px);
-        animation: slideOut-mobile 4s ease-in-out forwards,
-        textShadowAppear 1s ease-in-out 4s forwards,
-        shadowAppear 1s ease-in-out 4s forwards;
+        animation: slideOut-mobile 1s ease-in-out forwards;
     }
 }

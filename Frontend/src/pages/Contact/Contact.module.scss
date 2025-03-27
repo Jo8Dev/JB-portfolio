@@ -3,56 +3,7 @@
 
 .contact {
     @include m.section-container;
-    @include m.card-shadow-inset;
     height: auto;
     margin-top: 100px;
-
-    &__form {
-        @include m.card-shadow;
-        @include m.border-radius;
-        padding: 30px;
-        width: 100%;
-        max-width: 600px;
-        @include m.flex-column;
-        gap: 20px;
-    }
-
-    input,
-    textarea {
-        @include m.card-shadow-inset;
-        font-size: 1.1rem;
-        border-radius: 5px;
-        min-height: 40px;
-        padding-left: 5px;
-        background-color: white;
-    }
-
-    textarea {
-        padding-top: 10px;
-        resize: vertical;
-    }
-
-    button {
-        @include m.card-shadow;
-        font-weight: 400;
-        color: v.$secondary-color;
-        border-radius: 10px;
-        padding: 0.7em 1.7em;
-        max-width: 210px;
-        margin: auto;
-        cursor: pointer;
-        transition: all 0.2s;
-
-        &:hover {
-            box-shadow: none;
-            color: v.$tertiary-color;
-        }
-
-        &:active {
-            @include m.card-shadow-inset;
-            border-radius: 10px;
-            color: rgba(v.$tertiary-color, 0.5);
-        }
-
-    }
+    padding-bottom: 100px;
 }

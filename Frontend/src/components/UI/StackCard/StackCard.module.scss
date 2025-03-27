@@ -9,7 +9,7 @@
     color: v.$secondary-color;
     min-width: 100px;
     padding: 5px;
-    transition: box-shadow 0.5s ease-in-out 0.8s, transform 0.5s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out 0.2s, transform 0.2s ease-in-out;
 
     &__icon {
         @include m.responsive(mobile) {

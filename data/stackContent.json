@@ -37,6 +37,12 @@
             "alt": "logo Node.js"
         },
         {
+            "id": "stackExpress",
+            "icon": "icons/express.png",
+            "name": "Express",
+            "alt": "logo Express"
+        },
+        {
             "id": "stackMongo",
             "icon": "icons/mongodb.png",
             "name": "MongoDB",
@@ -47,6 +53,24 @@
             "icon": "icons/figma.png",
             "name": "Figma",
             "alt": "logo Figma"
+        },
+        {
+            "id": "stackNotion",
+            "icon": "icons/notion.png",
+            "name": "Notion",
+            "alt": "logo Notion"
+        },
+        {
+            "id": "stackGit",
+            "icon": "icons/git.png",
+            "name": "Git",
+            "alt": "logo Git"
+        },
+        {
+            "id": "stackGithub",
+            "icon": "icons/github.png",
+            "name": "GitHub",
+            "alt": "logo GitHub"
         }
     ],
     "inProgress": [

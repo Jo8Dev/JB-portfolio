@@ -43,12 +43,12 @@ function Form() {
             initial={{ boxShadow: "none" }}
             animate={{ boxShadow: SHADOWS.OUTSET }}
             transition={{ duration: 0.5, ease: "easeInOut" }}>
-            <label htmlFor="name">Nom</label>
-            <input type="text" name="name" required />
-            <label htmlFor="email">Email</label>
-            <input type="email" name="email" required />
-            <label htmlFor="message">Message</label>
-            <textarea name="message" required></textarea>
+            <label htmlFor="name-field">Nom</label>
+            <input type="text" id="name-field" name="name" autoComplete='name' required />
+            <label htmlFor="email-field">Email</label>
+            <input type="email" id="email-field" name="email" autoComplete='email' required />
+            <label htmlFor="message-field">Message</label>
+            <textarea id="message-field" name="message" autoComplete='off' required></textarea>
             <Button text="Envoyer le message" onClick={handleSubmitClick} />
             <span>{result}</span>
         </motion.form>

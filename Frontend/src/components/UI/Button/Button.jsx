@@ -60,7 +60,7 @@ function Button({ text, link, onClick, disabled, img, type, external, href }) {
                 whileHover={disabled ? {} : { boxShadow: SHADOWS.NONE }}
                 whileTap={disabled ? {} : { boxShadow: SHADOWS.INSET }}
                 whileInView={boxShadowStyle}
-                transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
             >
                 {text}
                 {img && <img src={img} alt={text} />}

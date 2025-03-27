@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "description": "Je suis basketteur professionnel depuis plus de 10 ans et, tout en poursuivant ma carrière sur les terrains, je me reconvertis vers le développement web, un domaine pour lequel j'ai toujours eu une passion profonde. "
+    },
+    {
+        "id": 2,
+        "description": "Depuis longtemps, je m'intéresse non seulement au développement logiciel, mais aussi au hardware et à l'univers de l'informatique. J'aime particulièrement monter des PC, ce qui me permet d'explorer la technologie sous un autre angle. Tout en continuant à jouer à haut niveau, j'ai entrepris une formation en développement web, où j'ai acquis des compétences en technologies telles que JavaScript, React, Node.js et MongoDB."
+    },
+    {
+        "id": 3,
+        "description": "Mon approche du développement est marquée par la rigueur et la discipline que j'ai développées dans le sport : chaque ligne de code compte, et je suis déterminé à continuer d’apprendre et de progresser. Aujourd'hui, je souhaite allier ma passion pour la technologie, mon esprit de compétition et mon intérêt pour le hardware afin de créer des projets innovants et impactants, tout en restant fidèle à mes valeurs de travail en équipe, d'effort et d'amélioration continue."
+    }
+]

@@ -1,5 +1,5 @@
 import styles from './Form.module.scss'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { motion } from 'motion/react'
 import { SHADOWS } from '../../../constants/animation'
 import Button from '../../UI/Button/Button'
@@ -7,7 +7,6 @@ import Button from '../../UI/Button/Button'
 function Form() {
 
     const [result, setResult] = useState("")
-    const formRef = useRef(null)
 
     const onSubmit = async (event) => {
         event.preventDefault()
@@ -32,14 +31,8 @@ function Form() {
         }
     }
 
-    const handleSubmitClick = () => {
-        if (formRef.current) {
-            formRef.current.requestSubmit()
-        }
-    }
-
     return (
-        <motion.form ref={formRef} onSubmit={onSubmit} className={styles.form}
+        <motion.form onSubmit={onSubmit} className={styles.form}
             initial={{ boxShadow: "none" }}
             animate={{ boxShadow: SHADOWS.OUTSET }}
             transition={{ duration: 0.5, ease: "easeInOut" }}>
@@ -49,7 +42,7 @@ function Form() {
             <input type="email" id="email-field" name="email" autoComplete='email' required />
             <label htmlFor="message-field">Message</label>
             <textarea id="message-field" name="message" autoComplete='off' required></textarea>
-            <Button text="Envoyer le message" onClick={handleSubmitClick} />
+            <Button text="Envoyer le message" type="submit" />
             <span>{result}</span>
         </motion.form>
     )

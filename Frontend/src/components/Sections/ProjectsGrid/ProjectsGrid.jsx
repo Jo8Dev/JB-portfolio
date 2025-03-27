@@ -28,6 +28,6 @@ function ProjectsGrid() {
             </div>
             <Button text={"Consultez mes projets"} link={"project"} />
         </section>
-    );
+    )
 }
-export default ProjectsGrid;
+export default ProjectsGrid

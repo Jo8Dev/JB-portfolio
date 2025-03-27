@@ -44,7 +44,7 @@ function Project() {
     )
 
     // Si pas encore de données, ne rien afficher
-    if (!projects) return null;
+    if (!projects) return null
 
     // Trouver le projet actuel
     const currentProjectIndex = projects.findIndex(p => p.id === id)
@@ -136,7 +136,7 @@ function Project() {
                 </motion.div>
             </div>
         </section>
-    );
+    )
 }
 
-export default Project;
+export default Project

@@ -1,5 +1,5 @@
 import styles from './HeroCard.module.scss'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 function HeroCard({ title, subTitle, description }) {
     return (

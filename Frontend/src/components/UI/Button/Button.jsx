@@ -8,7 +8,7 @@ function Button({ text, link, onClick, disabled, img, type, external, href }) {
     // Style conditionnel basé sur l'état disabled
     const boxShadowStyle = disabled
         ? { boxShadow: SHADOWS.INSET }
-        : { boxShadow: SHADOWS.OUTSET };
+        : { boxShadow: SHADOWS.OUTSET }
 
     // Pour les liens externes
     if (external || href) {
@@ -27,7 +27,7 @@ function Button({ text, link, onClick, disabled, img, type, external, href }) {
                 {text}
                 {img && <img src={img} alt={text} />}
             </motion.a>
-        );
+        )
     }
 
     // Si onClick est fourni, utiliser un bouton avec gestionnaire d'événement

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 import styles from './ProjectsGridCard.module.scss'
 import PropTypes from 'prop-types'
-import { motion } from 'motion/react';
-import { SHADOWS } from '../../../constants/animation';
+import { motion } from 'motion/react'
+import { SHADOWS } from '../../../constants/animation'
 
 function ProjectsGridCard({ id, images, title, technologies, index = 0 }) {
     return (

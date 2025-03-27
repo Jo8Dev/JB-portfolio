@@ -42,7 +42,7 @@ function Navbar() {
         { path: "/", label: "Accueil" },
         { path: "project", label: "Projets" },
         { path: "contact", label: "Contact" }
-    ];
+    ]
 
     return (
         <nav className={styles.navbar}>

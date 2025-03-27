@@ -1,13 +1,13 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y, EffectCreative } from 'swiper/modules';
-import PropTypes from 'prop-types';
-import styles from './Carousel.module.scss';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination, A11y, EffectCreative } from 'swiper/modules'
+import PropTypes from 'prop-types'
+import styles from './Carousel.module.scss'
 
 // Importation des styles CSS de Swiper
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-creative';
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/effect-creative'
 
 function Carousel({ images }) {
     return (
@@ -49,11 +49,11 @@ function Carousel({ images }) {
                 ))}
             </Swiper>
         </div>
-    );
+    )
 }
 
 Carousel.propTypes = {
     images: PropTypes.arrayOf(PropTypes.string).isRequired
-};
+}
 
-export default Carousel;
+export default Carousel

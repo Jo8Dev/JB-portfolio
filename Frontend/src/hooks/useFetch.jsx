@@ -24,14 +24,14 @@ export function useFetch(url) {
                 }
 
                 const result = await response.json()
-                setData(result);
+                setData(result)
             } catch (err) {
                 console.error("Erreur fetch:", err)
                 setError(err.message || "Une erreur est survenue lors du chargement des données")
             } finally {
                 setLoading(false)
             }
-        };
+        }
 
         fetchData()
     }, [url])

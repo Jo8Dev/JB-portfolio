@@ -1,21 +1,21 @@
 // src/components/UI/Modal/Modal.jsx
-import { useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import PropTypes from 'prop-types';
-import styles from './Modal.module.scss';
+import { useEffect } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+import PropTypes from 'prop-types'
+import styles from './Modal.module.scss'
 
 function Modal({ isOpen, onClose, children }) {
     // Empêcher le défilement lorsque la modale est ouverte
     useEffect(() => {
         if (isOpen) {
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden'
         } else {
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = 'auto'
         }
         return () => {
-            document.body.style.overflow = 'auto';
-        };
-    }, [isOpen]);
+            document.body.style.overflow = 'auto'
+        }
+    }, [isOpen])
 
     return (
         <AnimatePresence>
@@ -40,13 +40,13 @@ function Modal({ isOpen, onClose, children }) {
                 </>
             )}
         </AnimatePresence>
-    );
+    )
 }
 
 Modal.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired
-};
+}
 
-export default Modal;
+export default Modal

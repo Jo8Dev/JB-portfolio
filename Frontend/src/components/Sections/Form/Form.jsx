@@ -7,10 +7,10 @@ import Button from '../../UI/Button/Button'
 function Form() {
 
     const [result, setResult] = useState("")
-    const formRef = useRef(null);
+    const formRef = useRef(null)
 
     const onSubmit = async (event) => {
-        event.preventDefault();
+        event.preventDefault()
         setResult("Envoi en cours...")
         const formData = new FormData(event.target)
 
@@ -34,7 +34,7 @@ function Form() {
 
     const handleSubmitClick = () => {
         if (formRef.current) {
-            formRef.current.requestSubmit();
+            formRef.current.requestSubmit()
         }
     }
 

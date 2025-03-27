@@ -164,26 +164,6 @@ $container-padding: 20px;
         margin-top: 15px;
     }
 
-    &__link {
-        @include m.card-shadow;
-        border-radius: 15px;
-        text-decoration: none;
-        padding: 10px 20px;
-        transition: all 0.3s ease;
-
-        @media (hover: hover) {
-            &:hover {
-                color: v.$tertiary-color;
-                box-shadow: none;
-            }
-        }
-
-        &:active {
-            @include m.card-shadow-inset;
-            border-radius: 15px;
-        }
-    }
-
     @include m.responsive(mobile) {
         grid-template-columns: 1fr;
 

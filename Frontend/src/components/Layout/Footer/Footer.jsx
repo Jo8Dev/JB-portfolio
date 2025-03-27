@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { github, arrowUp } from '../../../assets/icons/index'
 
 function Footer() {
-    const [showScrollButton, setShowScrollButton] = useState(false);
+    const [showScrollButton, setShowScrollButton] = useState(false)
 
     // Vérifie la position du scroll
     useEffect(() => {
@@ -22,7 +22,7 @@ function Footer() {
 
         // Nettoyage à la destruction du composant
         return () => window.removeEventListener('scroll', handleScroll)
-    }, []);
+    }, [])
 
     const scrollToTop = (e) => {
         e.preventDefault()

@@ -1,5 +1,5 @@
 import styles from './BackgroundHeroCard.module.scss'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 
 function BackgroundHeroCard({ title, subTitle, description }) {

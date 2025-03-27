@@ -78,7 +78,7 @@ function Project() {
 
     return (
         <section className={styles.container}>
-            <SectionTitle className={styles.container__sectionTitle}>
+            <SectionTitle className={styles.container__sectionTitle} hx="h1">
                 Projets
             </SectionTitle>
 

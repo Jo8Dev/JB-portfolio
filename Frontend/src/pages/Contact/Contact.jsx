@@ -7,7 +7,7 @@ function Contact() {
 
     return (
         <SectionShadowInset className={styles.contact}>
-            <SectionTitle className={styles.contact__title}>
+            <SectionTitle className={styles.contact__title} hx="h1" >
                 Contact
             </SectionTitle>
             <Form />

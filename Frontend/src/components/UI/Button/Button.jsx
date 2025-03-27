@@ -10,6 +10,15 @@ function Button({ text, link, onClick, disabled, img, type, external, href }) {
         ? { boxShadow: SHADOWS.INSET }
         : { boxShadow: SHADOWS.OUTSET }
 
+    // Création d'un objet d'animation complet avec gestion des états
+    const animationProps = {
+        initial: { boxShadow: "none" },
+        whileHover: disabled ? {} : { boxShadow: SHADOWS.NONE },
+        whileTap: disabled ? {} : { boxShadow: SHADOWS.INSET },
+        whileInView: boxShadowStyle,
+        transition: { duration: 0.2, ease: "easeInOut" }
+    }
+
     // Pour les liens externes
     if (external || href) {
         return (
@@ -17,12 +26,8 @@ function Button({ text, link, onClick, disabled, img, type, external, href }) {
                 href={href || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.button || ''}
-                initial={{ boxShadow: "none" }}
-                whileHover={disabled ? {} : { boxShadow: SHADOWS.NONE }}
-                whileTap={disabled ? {} : { boxShadow: SHADOWS.INSET }}
-                whileInView={boxShadowStyle}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className={styles.button}
+                {...animationProps}
             >
                 {text}
                 {img && <img src={img} alt={text} />}
@@ -30,19 +35,15 @@ function Button({ text, link, onClick, disabled, img, type, external, href }) {
         )
     }
 
-    // Si onClick est fourni, utiliser un bouton avec gestionnaire d'événement
+    // Si onClick est fourni, on utilise un bouton avec gestionnaire d'événement
     if (onClick || type) {
         return (
             <motion.button
-                type={type} // Ajout du type (submit, button, reset)
-                initial={{ boxShadow: "none" }}
-                whileHover={disabled ? {} : { boxShadow: SHADOWS.NONE }}
-                whileTap={disabled ? {} : { boxShadow: SHADOWS.INSET }}
-                whileInView={boxShadowStyle}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
-                className={styles.button || ''}
+                type={type}
+                className={styles.button}
                 onClick={onClick}
                 disabled={disabled}
+                {...animationProps}
             >
                 {text}
                 {img && <img src={img} alt={text} />}
@@ -50,17 +51,13 @@ function Button({ text, link, onClick, disabled, img, type, external, href }) {
         )
     }
 
-    // Sinon, utiliser un Link (comportement existant)
+    // Sinon, on utilise un Link to
     return (
         <Link to={link || "#"} style={disabled ? { pointerEvents: 'none' } : {}}>
             <motion.button
-                className={styles.button || ''}
+                className={styles.button}
                 disabled={disabled}
-                initial={{ boxShadow: "none" }}
-                whileHover={disabled ? {} : { boxShadow: SHADOWS.NONE }}
-                whileTap={disabled ? {} : { boxShadow: SHADOWS.INSET }}
-                whileInView={boxShadowStyle}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
+                {...animationProps}
             >
                 {text}
                 {img && <img src={img} alt={text} />}

@@ -4,10 +4,17 @@ import { motion } from 'motion/react'
 import Button from '../../UI/Button/Button'
 import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import SectionText from '../../UI/SectionText/SectionText'
-import aboutMe from '../../../data/aboutMe.json'
 import SectionShadowInset from '../../UI/SectionShadowInset/SectionShadowInset'
+import { aboutMeUrl } from '../../../services/config'
+import { useFetch } from '../../../hooks/useFetch'
+import Loader from '../../UI/Loader/Loader'
 
 function About() {
+    const { data: aboutMe, loading, error } = useFetch(aboutMeUrl)
+
+    if (loading) return <Loader />
+    if (error) return <div className={styles.error}>Impossible de charger les projets</div>
+    if (!aboutMe) return null
 
     return (
         <SectionShadowInset className={styles.about}>
@@ -45,7 +52,7 @@ function About() {
                 </div>
             </div>
             <Button text={"Contactez moi"} link={"contact"} />
-        </SectionShadowInset>   
+        </SectionShadowInset>
     )
 }
 

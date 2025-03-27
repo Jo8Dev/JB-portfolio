@@ -1,38 +1,43 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom" // Ajout de useLocation
 import styles from "./Navbar.module.scss"
 import BurgerMenu from "../../UI/BurgerMenu/BurgerMenu"
 import Modal from "../../UI/Modal/Modal"
 
 function Navbar() {
-    // Initialiser isTablet avec une vérification immédiate pour éviter le flash de mes liens
-    const [isMenuOpen, setIsMenuOpen] = useState(false) // Gérer l'état du menu
-    const [isTablet, setIsTablet] = useState(() => window.innerWidth <= 768) // Vérifier la largeur de l'écran
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isTablet, setIsTablet] = useState(() => window.innerWidth <= 768)
+    const location = useLocation() // Récupère l'emplacement actuel
+
+    // Fonction pour vérifier si un lien est actif
+    const isLinkActive = (path) => {
+        if (path === "/") {
+            // Pour le lien Accueil, uniquement actif sur la page d'accueil exacte
+            return location.pathname === "/"
+        } else {
+            // Pour les autres liens, actifs si le chemin commence par leur route
+            return location.pathname.startsWith(`/${path}`)
+        }
+    }
 
     useEffect(() => {
         const checkScreenSize = () => {
-            setIsTablet(window.innerWidth <= 768) // Mettre à jour l'état de la tablette
+            setIsTablet(window.innerWidth <= 768)
         }
-
-        // Configurer l'écouteur d'événement pour les changements de taille
         window.addEventListener('resize', checkScreenSize)
-
-        return () => window.removeEventListener('resize', checkScreenSize) // Nettoyer l'écouteur d'événement
+        return () => window.removeEventListener('resize', checkScreenSize)
     }, [])
 
-    // Gérer l'ouverture du menu
     const handleBurgerClick = (isOpen) => {
         setIsMenuOpen(isOpen)
         document.body.style.overflow = isOpen ? 'hidden' : 'auto'
     }
 
-    // Fermer le menu
     const closeMenu = () => {
         setIsMenuOpen(false)
         document.body.style.overflow = 'auto'
     }
 
-    // Liste centralisée des liens de navigation
     const navLinks = [
         { path: "/", label: "Accueil" },
         { path: "project", label: "Projets" },
@@ -46,7 +51,10 @@ function Navbar() {
                 <ul className={styles.navbar__list}>
                     {navLinks.map(link => (
                         <li key={link.path} className={styles.navbar__item}>
-                            <Link to={link.path} className={styles.navbar__link}>
+                            <Link
+                                to={link.path}
+                                className={`${styles.navbar__link} ${isLinkActive(link.path) ? styles.navbar__link_active : ''}`}
+                            >
                                 {link.label}
                             </Link>
                         </li>
@@ -66,7 +74,7 @@ function Navbar() {
                                     <li key={link.path} className={styles.navbar__mobileItem}>
                                         <Link
                                             to={link.path}
-                                            className={styles.navbar__mobileLink}
+                                            className={`${styles.navbar__mobileLink} ${isLinkActive(link.path) ? styles.navbar__mobileLink_active : ''}`}
                                             onClick={closeMenu}
                                         >
                                             {link.label}

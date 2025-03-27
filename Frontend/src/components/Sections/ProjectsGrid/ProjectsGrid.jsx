@@ -3,7 +3,6 @@ import SectionTitle from '../../UI/SectionTitle/SectionTitle'
 import { useFetch } from '../../../hooks/useFetch'
 import { projectUrl } from '../../../services/config'
 import Loader from '../../UI/Loader/Loader'
-import SectionShadowInset from '../../UI/SectionShadowInset/SectionShadowInset'
 import ProjectsGridCard from '../../UI/ProjectsGridCard/ProjectsGridCard'
 import Button from '../../UI/Button/Button'
 

@@ -12,11 +12,11 @@ import { motion } from 'motion/react'
 import { SHADOWS } from '../../constants/animation'
 
 function Project() {
-    const { id } = useParams()
-    const navigate = useNavigate()
+    const { id } = useParams() // Récupère l'ID du projet depuis l'URL
+    const navigate = useNavigate() // Récupère la fonction de navigation
 
     // Fetch tous les projets
-    const { data: projects, loading, error } = useFetch(projectUrl)
+    const { data: projects, loading, error } = useFetch(projectUrl) // Utilise le hook personnalisé pour récupérer les données des projets
 
     // Redirige si l'ID n'existe pas
     useEffect(() => {
@@ -36,6 +36,7 @@ function Project() {
         </section>
     )
 
+    // Affiche une erreur si le fetch échoue
     if (error) return (
         <section className={styles.container}>
             <SectionTitle className={styles.container__sectionTitle}>Projets</SectionTitle>
@@ -47,15 +48,15 @@ function Project() {
     if (!projects) return null
 
     // Trouver le projet actuel
-    const currentProjectIndex = projects.findIndex(p => p.id === id)
-    const project = currentProjectIndex !== -1 ? projects[currentProjectIndex] : projects[0]
+    const currentProjectIndex = projects.findIndex(p => p.id === id) // Trouve l'index du projet actuel
+    const project = currentProjectIndex !== -1 ? projects[currentProjectIndex] : projects[0]// // Si l'index est valide, récupère le projet, sinon prend le premier projet
 
     // Navigation
-    const hasPrevious = currentProjectIndex > 0
-    const hasNext = currentProjectIndex < projects.length - 1
+    const hasPrevious = currentProjectIndex > 0 // Vérifie s'il y a un projet précédent
+    const hasNext = currentProjectIndex < projects.length - 1 // Vérifie s'il y a un projet suivant
 
-    const previousProjectId = hasPrevious ? projects[currentProjectIndex - 1].id : null
-    const nextProjectId = hasNext ? projects[currentProjectIndex + 1].id : null
+    const previousProjectId = hasPrevious ? projects[currentProjectIndex - 1].id : null // Récupère l'ID du projet précédent
+    const nextProjectId = hasNext ? projects[currentProjectIndex + 1].id : null // Récupère l'ID du projet suivant
 
     const handleNavigation = (projectId) => {
         if (projectId !== null) {

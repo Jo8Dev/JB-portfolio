@@ -61,7 +61,9 @@
             "Mongoose",
             "Express",
             "JWT",
-            "Bcrypt"
+            "Bcrypt",
+            "Dotenv",
+            "Postman"
         ],
         "description": "Mon Vieux Grimoire est une application web pour gérer une bibliothèque personnelle. J'ai développé le backend avec Node.js et Express, en implémentant des opérations CRUD pour l'ajout, la modification et la suppression de livres. La connexion des utilisateurs est sécurisée grâce à des tokens JWT et les mots de passe sont cryptés avant d'être stockés dans MongoDB. J'ai également créé des schémas Mongoose pour structurer les données, ce qui m'a permis de renforcer mes compétences en backend.",
         "links": [
@@ -95,6 +97,32 @@
             {
                 "url": "https://github.com/Jo8Dev/Nina-Carducci-Dev",
                 "label": "GitHub"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Menu Maker",
+        "images": [
+            "images/menu-maker.avif",
+            "images/menu-maker-2.avif",
+            "images/menu-maker-3.avif"
+        ],
+        "technologies": [
+            "Gestion de projet",
+            "Notion",
+            "Kanban",
+            "Feedly",
+            "Méthodologie Agile",
+            "Spécifications techniques",
+            "Veille technologique",
+            "Methodologie Scrum"
+        ],
+        "description": "Menu Maker est un projet de gestion de projet où j'ai développé les spécifications techniques, choisi la méthodologie Agile Scrum, et mis en place un Kanban sur Notion. J'ai également assuré une veille technologique sur Feedly pour rester informé des dernières tendances et innovations dans le domaine.",
+        "links": [
+            {
+                "url": "https://ballistic-baritone-b78.notion.site/1b599ca2688980d19bf4d5223be1f0ef?v=1b599ca2688980d0a3e8000c140fc727",
+                "label": "Notion"
             }
         ]
     }

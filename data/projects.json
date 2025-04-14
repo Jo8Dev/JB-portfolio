@@ -125,5 +125,35 @@
                 "label": "Notion"
             }
         ]
+    },
+    {
+        "id": "5",
+        "title": "Booki",
+        "images": [
+            "images/booki.avif",
+            "images/booki-2.avif",
+            "images/booki-3.avif"
+        ],
+        "technologies": [
+            "HTML",
+            "CSS",
+            "Flexbox",
+            "Grid",
+            "Figma",
+            "Git",
+            "GitHub"
+        ],
+        "description": "Booki est un projet d'intégration web où j'ai utilisé HTML et CSS pour créer une interface responsive en respectant une maquette Figma. J'ai porté une attention particulière au responsive design, en utilisant Flexbox et Grid pour garantir une mise en page adaptable à tous les types d'écrans. Le projet était versionné sur Git et hébergé sur GitHub.",
+        "links": [
+            {
+                "url": "https://github.com/jo8dev/Booki",
+                "label": "GitHub"
+            },
+            {
+                "url": "https://jo8dev.github.io/Booki/",
+                "label": "Site"
+            }
+        ]
     }
+    
 ]

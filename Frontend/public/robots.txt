@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Permettre l'exploration de tout le site
+Disallow:
+
+# Sitemap (ajoutez ceci si vous avez un sitemap)
+Sitemap: https://www.codebyjo.fr/sitemap.xml

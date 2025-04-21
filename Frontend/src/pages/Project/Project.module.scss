@@ -118,20 +118,6 @@ $container-padding: 20px;
         }
     }
 
-    // Le reste du code reste identique
-    &__image {
-        @include m.border-radius;
-        @include m.card-shadow-inset;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 825 / 411;
-        object-fit: cover;
-
-        &:hover {
-            translate: scale(1.8);
-        }
-    }
-
     &__projectTitle {
         color: v.$tertiary-color;
         text-align: center;

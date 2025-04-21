@@ -1,8 +1,6 @@
 @use "../../../assets/styles/variables" as v;
 @use "../../../assets/styles/mixins" as m;
 
-
-
 .burgerMenu {
     position: relative;
     width: 40px;
@@ -62,11 +60,6 @@
             transform: rotate(-45deg) translate(4px, 2px);
             width: 90%;
         }
-    }
-
-    // Effet hover
-    &:hover .bar {
-        background: linear-gradient(to right, v.$tertiary-color);
     }
 
     // Animation supplémentaire

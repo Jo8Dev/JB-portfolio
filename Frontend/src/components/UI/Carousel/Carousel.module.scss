@@ -61,8 +61,6 @@
             font-size: 18px;
         }
 
-
-
         @include m.responsive(mobile) {
             display: none;
         }

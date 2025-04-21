@@ -4,6 +4,8 @@
     @include m.flex-center;
     height: 98vh;
     width: 100%;
+    /*Couleur de fallback de l'image de fond*/
+    background-color: black;
     /* Fixe l'image pendant le scroll */
     background-attachment: fixed;
     /* L'image prendra 100% de l'espace, quitte à la crop */
